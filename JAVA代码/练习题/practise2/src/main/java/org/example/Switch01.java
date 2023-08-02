@@ -29,7 +29,7 @@ public class Switch01 {
                     System.out.println("输入错误");
                     break;
             }
-// 优化版本1
+// switch新特性---箭头表达式
         int days = 0;
         switch (month){
             case 1,3,5,7,8,10,12 -> days = 31;
@@ -48,7 +48,7 @@ public class Switch01 {
         }else {
             System.out.println("switch新特性---箭头表达式：" + year + "年" + month + "月有" + days + "天");
         }
-// 优化版本2
+// switch新特性---yield
         int day = switch (month){
             case 1,3,5,7,8,10,12 -> 31;
             case 4,6,9,11 -> 30;
