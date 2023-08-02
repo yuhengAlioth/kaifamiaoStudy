@@ -12,8 +12,8 @@ public class Main3 {
         int b = input.nextInt();
         System.out.println("请输入三角形的第三条边");
         int c = input.nextInt();
-        boolean res = ((a + b) > c && (a + c) > b && (b + c) > a) || (((a + b) > c && (a + c) > b && (b + c) > a) &&
-                ((a - b) < c && (a - c) < b && (b - c) < a));
+        boolean res = ((a + b) > c && (a + c) > b && (b + c) > a);
+//                || (((a + b) > c && (a + c) > b && (b + c) > a) && ((a - b) < c && (a - c) < b && (b - c) < a));
         System.out.println("输入的三条边是否是三角形：" + res);
     }
 }
