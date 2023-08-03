@@ -1,8 +1,8 @@
-package org.example;
+package LianXi;
 
 import java.util.Scanner;
 
-public class Main4 {
+public class Lianxi0801_4 {
     public static void main(String[] args) {
         // 定义两个整变量，交换两个变量的值。 方法1：通过位运算(异或运算) 方法2：定义临时(中间)变量
         Scanner input = new Scanner(System.in);

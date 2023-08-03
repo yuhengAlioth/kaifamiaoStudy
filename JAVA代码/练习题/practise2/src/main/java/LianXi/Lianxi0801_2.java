@@ -1,8 +1,8 @@
-package org.example;
+package LianXi;
 
 import java.util.Scanner;
 
-public class Main2 {
+public class Lianxi0801_2 {
     public static void main(String[] args) {
         // 从键盘上输入一个三位数，判断是否是水仙花数，是输出true，不是输出false 水仙花：各个位上的数字的立方和等于该数本身
         System.out.println("输入一个三位数");

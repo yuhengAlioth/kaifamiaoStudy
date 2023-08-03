@@ -1,8 +1,8 @@
-package org.example;
+package LianXi;
 
 import java.util.Scanner;
 
-public class Main3 {
+public class Lianxi0801_3 {
     public static void main(String[] args) {
         // 编写一个Java程序，接收用户输入的一个三角形的三个边长，判断这三条边是否能构成一个三角形，并输出相应的结果。
         Scanner input = new Scanner(System.in);

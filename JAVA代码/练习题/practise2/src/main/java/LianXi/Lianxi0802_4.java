@@ -1,8 +1,8 @@
-package org.example;
+package LianXi;
 
 import java.util.Scanner;
 
-public class Lianxi2_4 {
+public class Lianxi0802_4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("请输入生日的月份");

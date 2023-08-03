@@ -1,8 +1,8 @@
-package org.example;
+package LianXi;
 
 import java.util.Scanner;
 
-public class Lianxi2_3 {
+public class Lianxi0802_3 {
     public static void main(String[] args) {
 //        编写一个程序，根据用户输入的月份（1 到 12），输出该月份所属的季节。假设春季是 3 到 5 月，夏季是 6 到 8 月，秋季是 9 到 11 月，冬季是 12、1 和 2月。
 //        如果输入的月份超出了范围，输出"输入错误"。

@@ -1,8 +1,8 @@
-package org.example;
+package LianXi;
 
 import java.util.Scanner;
 
-public class Main {
+public class Lianxi0801 {
     public static void main(String[] args) {
 //  从键盘上输入一个四位整数，求各位数之和。
         System.out.println("请输入一个四位整数");
