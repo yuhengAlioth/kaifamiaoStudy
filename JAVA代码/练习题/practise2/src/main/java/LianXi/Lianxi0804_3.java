@@ -23,8 +23,6 @@ public class Lianxi0804_3 {
             }
             if (count == 2) {
                 g += 1;
-//                System.out.println(num + "以内质数为：" + i);
-
             }
         }
         System.out.println(num + "以内质数为：" + g + "个");
