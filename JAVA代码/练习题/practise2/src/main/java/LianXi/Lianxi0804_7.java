@@ -10,24 +10,22 @@ public class Lianxi0804_7 {
         int number = scanner.nextInt();
         System.out.print("请输入数字的位数：");
         int digits = scanner.nextInt();
-        boolean isPalindrome = checkPalindrome(number, digits);
+//        判断是否是回文数字
+        boolean isPalindrome = true;
+        String str = String.valueOf(number);
+        int length = str.length();
+        if (length != digits) {
+            isPalindrome = false;
+        }
+        for (int i = 0; i < length / 2; i++) {
+            if (str.charAt(i) != str.charAt(length - i - 1)) {
+                isPalindrome = false;
+            }
+        }
         if (isPalindrome) {
             System.out.println(number + " 是回文数字");
         } else {
             System.out.println(number + " 不是回文数字");
         }
-    }
-    public static boolean checkPalindrome(int number, int digits) {
-        String str = String.valueOf(number);
-        int length = str.length();
-        if (length != digits) {
-            return false;
-        }
-        for (int i = 0; i < length / 2; i++) {
-            if (str.charAt(i) != str.charAt(length - i - 1)) {
-                return false;
-            }
-        }
-        return true;
     }
 }

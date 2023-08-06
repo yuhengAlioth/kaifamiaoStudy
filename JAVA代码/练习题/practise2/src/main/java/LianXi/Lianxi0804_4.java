@@ -16,8 +16,8 @@ public class Lianxi0804_4 {
         int day = input.nextInt();
         int money = 1; // 第一天的钱
         int n = 1;
-        // 从第二天开始循环
-        for (int i = 2;i <= day;i ++){
+        // 开始循环
+        for (int i = 1;i < day;i ++){
             n *= 2; // 当天赚的钱
             money += n; //总钱数
         }
