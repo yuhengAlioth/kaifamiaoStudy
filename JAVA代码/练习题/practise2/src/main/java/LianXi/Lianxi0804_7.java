@@ -10,6 +10,7 @@ public class Lianxi0804_7 {
         int number = scanner.nextInt();
         System.out.print("请输入数字的位数：");
         int digits = scanner.nextInt();
+        // 方法一
 //        判断是否是回文数字
         boolean isPalindrome = true;
         String str = String.valueOf(number);
@@ -25,6 +26,16 @@ public class Lianxi0804_7 {
         if (isPalindrome) {
             System.out.println(number + " 是回文数字");
         } else {
+            System.out.println(number + " 不是回文数字");
+        }
+        // 方法二
+        int a = number / 1000;
+        int b = number / 100 % 10;
+        int c = number / 10 % 10;
+        int d = number % 10;
+        if (a == d && b == c){
+            System.out.println(number + " 是回文数字");
+        }else {
             System.out.println(number + " 不是回文数字");
         }
     }
