@@ -18,6 +18,5 @@ public class LianXi0807_11 {
         for (int b: arr) {
             System.out.print(b + " ");
         }
-
     }
 }
