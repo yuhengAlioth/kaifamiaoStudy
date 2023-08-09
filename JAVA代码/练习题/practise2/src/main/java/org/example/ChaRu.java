@@ -4,7 +4,7 @@ public class ChaRu {
     public static void main(String[] args) {
         // 插入排序
         int[] arr = new int[]{12,56,3,47,785,11,58};
-        // 对数组进行循环
+        // 从小到大排序
         for (int i = 0; i < arr.length - 1; i++) {
             // 将数组的第 i + 1 的数拿出来
             int temp = arr[i + 1];
@@ -17,7 +17,21 @@ public class ChaRu {
             // 跳出循环进行换值操作
             arr[index + 1] = temp;
         }
-
+        System.out.print("从小到大排序：");
+        for (int i : arr) {
+            System.out.print(i + "\t");
+        }
+        System.out.println();
+        // 从大到小排序
+        for (int i = 0; i < arr.length - 1; i++) {
+            int temp = arr[i + 1];
+            int index = i;
+            for (;index >= 0 && temp > arr[index];index --){
+                arr[index + 1] = arr[index];
+            }
+            arr[index + 1] = temp;
+        }
+        System.out.print("从大到小排序：");
         for (int i : arr) {
             System.out.print(i + "\t");
         }
