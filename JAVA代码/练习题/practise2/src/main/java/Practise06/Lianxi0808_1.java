@@ -2,7 +2,7 @@ package Practise06;
 
 import java.util.Random;
 
-public class Lianxi0808 {
+public class Lianxi0808_1 {
     public static void main(String[] args) {
         // 成绩排名,一个班级有若干学生，每个学生的成绩以整数表示。
         // 动态初始化数组

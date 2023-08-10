@@ -1,6 +1,6 @@
 package Practise03;
 
-public class Lianxi0803 {
+public class Lianxi0803_1 {
     public static void main(String[] args) {
         for (int i=1;i< 7;i++){
             for (int j=7;j>i;j--){

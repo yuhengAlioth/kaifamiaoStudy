@@ -12,6 +12,24 @@ public class Lianxi0809_3 {
         //B：给这个二维数组任何一行的第一列和最后一列赋值为1
         //C：按照规律给其他元素赋值从第三行开始，每一个数据是它上一行的前一列和它上一行的本列之和。
         //D:遍历这个二维数组。
-
+        int[][] tree = new int[6][6];
+        for (int i = 0; i < tree.length; i++) {
+            for (int j = 0; j <= i; j++) {
+                // 第一个和最后一个都是1
+                if (j == 0 || j == i) {
+                    tree[i][j] = 1;
+                } else {
+                    tree[i][j] = tree[i - 1][j] + tree[i - 1][j - 1];
+                }
+            }
+        }
+        for (int[] ints : tree) {
+            for (int ints2 : ints) {
+                if (ints2 != 0){
+                    System.out.print(ints2 + "\t");
+                }
+            }
+            System.out.println();
+        }
     }
 }

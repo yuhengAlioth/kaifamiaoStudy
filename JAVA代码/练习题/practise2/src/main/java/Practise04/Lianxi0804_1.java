@@ -2,7 +2,7 @@ package Practise04;
 
 import java.util.Scanner;
 
-public class Lianxi0804 {
+public class Lianxi0804_1 {
     public static void main(String[] args) {
 //        求指定两个数的最大公约数和最小公倍数
         Scanner input = new Scanner(System.in);

@@ -2,7 +2,7 @@ package Practise02;
 
 import java.util.Scanner;
 
-public class Lianxi0802 {
+public class Lianxi0802_1 {
     public static void main(String[] args) {
 //    编写一个简单的计算器程序，要求用户输入两个数和操作符（+、-、*、/），
 //    然后根据操作符进行相应的运算，并输出结果。如果输入的运算符不是有效的运算符，则输出"无效的运算符"。

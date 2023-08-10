@@ -1,6 +1,6 @@
 package Practise05;
 
-public class LianXi0807 {
+public class LianXi0807_1 {
     public static void main(String[] args) {
         // 创建长度为10的int数组初始化值
         int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};
