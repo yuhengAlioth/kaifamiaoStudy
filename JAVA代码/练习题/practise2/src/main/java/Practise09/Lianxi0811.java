@@ -18,7 +18,8 @@ public class Lianxi0811 {
         // 生成随机数
         Random rand = new Random();
         int type = rand.nextInt(4) + 1;
-        int cishu = 3; //操作次数
+        int cishu = 5; //操作次数
+        System.out.println("初始成长值为：" + grow);
         for (int i = 1; i <= cishu ; i++) {
 //            System.out.println(type);
             // 分支 按照type执行不同的方法
@@ -77,14 +78,17 @@ public class Lianxi0811 {
      */
     public static void worms() {
         count ++;
-        if (count == 3) {
-            grow -= 30;
-            System.out.println("连续生虫3次,成长值额外 -20  当前成长值为：" + grow);
-            count = 0;
-        } else {
-            grow -= 10;
-            System.out.println("生虫,成长值 -10  当前成长值为：" + grow);
-        }
+//        if (grow > 0){
+            if (count == 3) {
+                grow -= 30;
+                System.out.println("连续生虫3次,成长值额外 -20  当前成长值为：" + grow);
+                count = 0;
+            } else {
+                grow -= 10;
+                System.out.println("生虫,成长值 -10  当前成长值为：" + grow);
+            }
+//        }
+
     }
 }
 
