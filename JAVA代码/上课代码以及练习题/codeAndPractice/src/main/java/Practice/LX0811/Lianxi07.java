@@ -11,24 +11,21 @@ import java.util.Arrays;
  */
 public class Lianxi07 {
     public static void main(String[] args) {
-        int[] arr = new int[]{125,52,63,48,56};
-        int key1 = 5;
-        int key2 = 1;
-        JiaoHuan(arr,key1,key2);
+        // 编写一个方法，接受一个整数数组和一个正整数 k 作为参数，将数组中的元素左移 k 个位置。
+        int[] nums = {1, 2, 3, 4, 5};
+        int[] leftRemove = leftRemove(nums, 2);
+        System.out.println(Arrays.toString(leftRemove));
     }
-    // 交换元素位置
-    // 编写一个方法，接受一个整数数组和两个索引作为参数，交换数组中指定索引位置的两个元素。
-    public static void JiaoHuan(int[] arr,int key1,int key2){
-        System.out.println("原数组：" + Arrays.toString(arr));
-        System.out.println();
-        if (key1 <= arr.length && key2 <= arr.length){
-            int temp = arr[key1 - 1];
-            arr[key1 - 1] = arr[key2 - 1];
-            arr[key2 - 1] = temp;
-            System.out.println("交换后的数组：" + Arrays.toString(arr));
-        }else {
-            System.out.print("请输入正确的数组交换位置");
-        }
+
+    public static int[] leftRemove(int[] arr, int k) {
+        k %= arr.length;
+        int[] newArr = new int[arr.length];
+        // arr[1, 2, 3, 4, 5]    2 newArr [3, 4, 5, 1, 2]
+        // 原数组  原数组开始复制的位置  新数组  新数组开始赋值的位置  复制的长度
+        System.arraycopy(arr, k, newArr, 0, arr.length - k);
+        System.arraycopy(arr, 0, newArr, arr.length - k, k);
+        return newArr;
+
     }
 }
 
