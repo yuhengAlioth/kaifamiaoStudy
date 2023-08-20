@@ -18,7 +18,14 @@ public class Library {
 
 
     public Library() {
-        this.capacity = 10; // 初始化数组长度
+        this(2);
+    }
+
+    public Library(int capacity) {
+        if (capacity < 2) {
+            capacity = 2;
+        }
+        this.capacity = capacity;// 初始化数组长度
         books = new Book[capacity]; // 初始化数组
         books[0] = new Book("高等元素论", "mhy", 2019, 648);
         books[1] = new Book("小王子", "wy", 1980, 48);
@@ -30,12 +37,17 @@ public class Library {
     }
 
     public boolean addBook(Book book) {
-        if (count > books.length - 1) {
-            return false; // 数组扩容
-        }
+        grow();
         books[count] = book;
         count ++;
         return true;
+    }
+    public void grow() {
+        if (count == books.length) { // 说明已经存储到极限了，此时要扩容
+            Book[] books1 = new Book[books.length * 2];
+            System.arraycopy(books, 0, books1, 0, books.length);
+            books = books1;
+        }
     }
 
     public void showAll() {
