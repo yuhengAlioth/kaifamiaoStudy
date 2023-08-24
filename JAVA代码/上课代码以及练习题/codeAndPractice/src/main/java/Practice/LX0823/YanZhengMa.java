@@ -17,7 +17,9 @@ public class YanZhengMa {
     }
     private static void generateCode(int num){
         Random random = new Random();
-        String str = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String str = "abcdefghijklmnopqrstuvwxyz" +
+                "0123456789" +
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String code = "";
         System.out.print("随机验证码为：");
         for (int i = 0; i < num; i++) {
