@@ -1,5 +1,7 @@
 package Practice.LX0824;
 
+import java.util.Scanner;
+
 /**
  * @作者：玉蘅
  * @项目名称：codeAndPractice
@@ -33,6 +35,29 @@ public class QuChong {
         for (int i = 0; i <= k + 1; i++) {
             System.out.print(charArray[i]);
         }
+
+
+
+        System.out.println();
+        System.out.println("============================");
+        Scanner input = new Scanner(System.in);
+        System.out.print("输入一串字符：");
+        String string = input.next();
+        String letter = quChong(string);
+        System.out.println(letter);
+    }
+    public static String quChong(String str){
+        // 将空格替换为空字符串
+        str = str.replace(" ","");
+        String newStr = "";
+        for (int i = 0; i < str.length(); i++) {
+            // 将字符串拆成字符
+            char c = str.charAt(i);
+            if (newStr.indexOf(c) == -1){ // 如果新字符串中没有就添加进去
+                newStr += c;
+            }
+        }
+        return newStr;
     }
 }
 
