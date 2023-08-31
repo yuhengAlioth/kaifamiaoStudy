@@ -27,6 +27,7 @@ public class MyStack extends Stack {
 
     @Override
     void push(Object element) { // 入栈
+        grow();
         arr[count] = element;
         count++;
     }
@@ -43,20 +44,20 @@ public class MyStack extends Stack {
 
     @Override
     Object peek() {
-        Object nowNum = arr[count-1];
-        return nowNum;
+
+        return arr[count-1];
     }
 
     @Override
     boolean isEmpty() {
-        for (int i = 0; i < arr.length; i++) {
+/*        for (int i = 0; i < arr.length; i++) {
 //            System.out.println(arr[i]);
             if (arr[i] != null){
                 return false;
             }
         }
-
-        return true;
+        return true;*/
+        return count == 0;
     }
 
     @Override
@@ -68,6 +69,14 @@ public class MyStack extends Stack {
             }
         }
         return num;
+    }
+    @Override
+    void grow() {
+        if (count >= arr.length) {
+            Object[] newArr = new Object[capacity * 2];
+            System.arraycopy(arr, 0, newArr, 0, arr.length);
+            arr = newArr;
+        }
     }
 }
 

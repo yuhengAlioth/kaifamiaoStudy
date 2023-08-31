@@ -37,5 +37,6 @@ public abstract class Stack {
      * @return 栈中元素的个数
      */
     abstract int size();
+    abstract void grow();
 }
 
