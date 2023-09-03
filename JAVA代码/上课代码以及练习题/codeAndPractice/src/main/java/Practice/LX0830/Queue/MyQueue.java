@@ -61,18 +61,4 @@ public class MyQueue extends Queue {
         return count;
     }
 }
-class Test{
-    public static void main(String[] args) {
-        MyQueue my = new MyQueue();
-        my.enqueue("1test");
-        my.enqueue("2test");
-
-        System.out.println(my.dequeue());
-        System.out.println(my.peek());
-        System.out.println(my.isEmpty());
-        System.out.println(my.size());
-    }
-
-
-}
 
