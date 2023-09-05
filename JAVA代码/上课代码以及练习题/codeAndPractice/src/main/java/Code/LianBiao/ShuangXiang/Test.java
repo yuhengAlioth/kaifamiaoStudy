@@ -18,6 +18,7 @@ public class Test {
         doubleLinked.add("wt");
         doubleLinked.removeFirst();
         doubleLinked.removeLast();
+        System.out.println(doubleLinked);
     }
 }
 
