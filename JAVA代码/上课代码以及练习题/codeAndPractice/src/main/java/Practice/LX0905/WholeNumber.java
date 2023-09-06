@@ -20,12 +20,13 @@ public class WholeNumber {
         vector.add(5);
         vector.add(4);
         vector.add(4);
-        System.out.println("出现的次数为："+count(vector, count, 4));
+        System.out.println("出现的次数为：" + count(vector, 4));
     }
 
-    public static int count(Vector vector, int count,int num) {
-        for (int i=0;i<vector.size();i++){
-            if ((int)(vector.get(i))==num){
+    public static int count(Vector vector, int num) {
+        int count = 0;
+        for (int i = 0; i < vector.size(); i++) {
+            if ((int) (vector.get(i)) == num) {
                 count++;
             }
         }

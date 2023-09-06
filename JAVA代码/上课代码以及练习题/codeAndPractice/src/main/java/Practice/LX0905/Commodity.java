@@ -11,8 +11,8 @@ import java.util.Objects;
  * @时间：2023/09/05/20:01
  */
 public class Commodity {
-    public double price;
-    public String name;
+    private double price;
+    private String name;
 
     public Commodity() {
 

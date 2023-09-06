@@ -10,7 +10,7 @@ import java.util.function.Consumer;
  * @项目名称：codeAndPractice
  * @包名：Code.JiHe
  * @文件名称：YongJieWuJianTest
- * @代码功能：测试动态数组集合
+ * @代码功能：Vector集合
  * @时间：2023/09/05/11:31
  */
 public class YongJieWuJianTest {
