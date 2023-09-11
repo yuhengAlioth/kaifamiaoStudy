@@ -1,4 +1,4 @@
-package exercise.september.Sept8th;
+package Practice.LX0908;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -9,33 +9,35 @@ import java.util.function.BiConsumer;
 
 public class Exec01 {
     public static void main(String[] args) {
-        // 1.创建⼀个HashMap集合，使⽤三种遍历⽅式输出集合中的元素。
-        HashMap<Integer, TVPlay> hashMap = new HashMap<>();
-        hashMap.put(1, new TVPlay("甄嬛传", 74));
-        hashMap.put(2, new TVPlay("长风渡", 40));
-        hashMap.put(3, new TVPlay("莲花楼", 40));
-        hashMap.put(4, new TVPlay("长相思", 40));
-        hashMap.put(5, new TVPlay("qq", 40));
-
-        // 通过键找值
-        Set<Integer> integers = hashMap.keySet();
-        Iterator<Integer> iterator = integers.iterator();
-        while (iterator.hasNext()) {
-            Integer next = iterator.next();
-            TVPlay tvPlay = hashMap.get(next);
-            System.out.println(next + "==" + tvPlay);
-        }
-        System.out.println("==============");
-        Set<Map.Entry<Integer, TVPlay>> entries = hashMap.entrySet();
-        for (Map.Entry<Integer, TVPlay> en : entries){
-            System.out.println(en);
-        }
-        System.out.println("==============");
-        hashMap.forEach(new BiConsumer<Integer, TVPlay>() {
+        // 创建一个 HashMap 集合，使用三种遍历方式输出集合中的元素。
+        HashMap<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("1", 1);
+        hashMap.put("2", 1);
+        hashMap.put("3", 1);
+        // forEach()
+        hashMap.forEach(new BiConsumer<String, Integer>() {
+            // s key  integer value
             @Override
-            public void accept(Integer integer, TVPlay tvPlay) {
-                System.out.println(integer+"=="+tvPlay);
+            public void accept(String s, Integer integer) {
+                System.out.println(s + "-->" + integer);
             }
         });
+        hashMap.forEach((k, v) -> {
+            System.out.println(k + "==>" + v);
+        });
+        // Set key 迭代器
+        Set<String> set = hashMap.keySet();
+        Iterator<String> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            Integer value = hashMap.get(key);
+            System.out.println(key + "==>" + value);
+        }
+        // 获取所有键值对的Set集合
+        Set<Map.Entry<String, Integer>> entrySet = hashMap.entrySet();
+        entrySet.forEach(entry -> { // entry 一个键值对组合
+            System.out.println(entry.getKey() + "====" + entry.getValue());
+        });
+        System.out.println(hashMap);
     }
 }
