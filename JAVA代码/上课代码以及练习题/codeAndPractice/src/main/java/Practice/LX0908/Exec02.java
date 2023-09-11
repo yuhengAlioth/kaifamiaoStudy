@@ -8,7 +8,7 @@ public class Exec02 {
         // 输入一个字符串，统计字符串中每个字符出现的次数.最后输出结果
         String str = "abcdefghaaddcc";
         HashMap<Character, Integer> hashMap = new HashMap<>();
-        for (int i = 0; i < str.length(); i ++) {
+        for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
             hashMap.compute(c, new BiFunction<Character, Integer, Integer>() {
                 @Override
@@ -27,5 +27,5 @@ public class Exec02 {
         }
         System.out.println(hashMap);
     }
-    }
+}
 
