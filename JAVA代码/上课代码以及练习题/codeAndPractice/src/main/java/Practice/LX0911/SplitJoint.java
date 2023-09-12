@@ -26,8 +26,11 @@ public class SplitJoint {
 
         String stream2 = Arrays.stream(arr).reduce("",(string, string2) -> string + string2);
 
+        String stream3 = Arrays.stream(arr).reduce((string, string2) -> string + string2).get();
+
         System.out.println(stream);
         System.out.println(stream2);
+        System.out.println(stream3);
     }
 }
 

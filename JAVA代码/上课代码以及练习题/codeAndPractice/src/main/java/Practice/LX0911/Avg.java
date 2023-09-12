@@ -16,9 +16,9 @@ public class Avg {
         List<Integer> numbers = Arrays.asList(23, 12, 6, 77, 48, 5);
         double average = numbers.stream()
 //                .mapToDouble(num -> num * num) // 将每个元素平方
-                .mapToDouble(num -> Math.pow(num,2)) // 将每个元素平方
+                .mapToDouble(num -> Math.pow(num,2)) // 将每个元素平方+
                 .average() // 求平均值
-                .orElse(0); // 如果集合为空，设置默认值
+                .orElse(0.0); // 如果集合为空，设置默认值
 
         System.out.println("每个元素平方的平均值：" + average);
 

@@ -14,6 +14,12 @@ import java.util.stream.Stream;
  */
 public class Evaluation {
     public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        Collections.addAll(list, 1, 5, 0, 86, 32);
+        Integer sum1 = list.stream().reduce((i1, i2) -> i1 + i2).get();
+        Integer max1 = list.stream().max((i1, i2) -> i1 - i2).get();
+        Integer min1 = list.stream().min((i1, i2) -> i1 - i2).get();
+
 
         List<Integer> numbers = Arrays.asList(23, 12, 6, 77, 48, 0);
         Stream<Integer> stream = numbers.stream();
@@ -21,27 +27,27 @@ public class Evaluation {
         int sum = (int) stream.reduce(0, new BinaryOperator<Integer>() {
             @Override
             public Integer apply(Integer integer, Integer integer2) {
-                return (int)integer + (int)integer2;
+                return (int) integer + (int) integer2;
             }
         });
 
         int min = (int) numbers.stream().min(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                return (int)o1 - (int)o2;
+                return (int) o1 - (int) o2;
             }
         }).get();
 
         int max = (int) numbers.stream().max(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                return (int)o1 - (int)o2;
+                return (int) o1 - (int) o2;
             }
         }).get();
 
-        int sum2 = (int) numbers.stream().reduce(0,(a,b) -> (int) a + (int) b);
-        int min2 = (int) numbers.stream().min((a,b) -> (int) a - (int) b).get();
-        int max2 = (int) numbers.stream().max((a,b) -> (int) a - (int) b).get();
+        int sum2 = (int) numbers.stream().reduce(0, (a, b) -> (int) a + (int) b);
+        int min2 = (int) numbers.stream().min((a, b) -> (int) a - (int) b).get();
+        int max2 = (int) numbers.stream().max((a, b) -> (int) a - (int) b).get();
 
         System.out.println("最小值：" + min);
         System.out.println("最大值：" + max);
