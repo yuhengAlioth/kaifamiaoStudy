@@ -1,5 +1,7 @@
 package Test.One;
 
+import java.util.HashMap;
+
 import static java.lang.Math.abs;
 
 /**
@@ -26,15 +28,12 @@ public class MnaZu {
     }
 
     public static boolean isAnagram(int[] nums, int k) {
+        HashMap<Integer,Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 1; j < nums.length - 1; j++) {
-                if (nums[i] == nums[j] && i != j ) {
-                    if (abs(i - j) <= k) {
-                        return true;
-                    }
-                }
-
+            if (map.containsKey(nums[i]) && Math.abs(i - map.get(nums[i])) <= k){
+                return true;
             }
+            map.put(nums[i], i);
         }
         return false;
     }

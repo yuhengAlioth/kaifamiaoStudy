@@ -13,7 +13,8 @@ import java.util.HashMap;
  */
 public class YiWei {
     public static void main(String[] args) {
-        String s = "rat";        String t = "car";
+        String s = "rat";
+        String t = "car";
         String s2 = "anagram";
         String t2 = "nagaram";
         System.out.println(isAnagram2(s, t));
