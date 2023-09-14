@@ -15,29 +15,34 @@ import java.io.IOException;
  */
 public class Count {
     public static void main(String[] args) {
-        int[] num = {5, 2, 4, 6, 8, 5};
-        String txt = "D:\\桌面\\intTest.txt";
-        // 写入整数到文件..
-        try (FileOutputStream out = new FileOutputStream(txt)) {
-            for (int i : num) {
-                out.write(i);
+        int[] nums = {5, 2, 4, 6, 8, 5};
+        String name = "D:\\桌面\\intTest.txt";
+        File file = new File(name);
+        if (!file.getParentFile().exists()) {
+            file.getParentFile().mkdirs();
+        }
+        try(FileOutputStream out = new FileOutputStream(file);
+            FileInputStream in = new FileInputStream(file)
+        ) {
+            String str = "";
+            for (int num : nums) {
+                str += String.valueOf(num) + ",";
             }
-            out.flush();
-            out.close();
+            str = str.substring(0, str.length() - 1);
+            byte[] bytes = str.getBytes();
+            out.write(bytes);
+            byte[] allBytes = in.readAllBytes();
+            String num = new String(allBytes);
+            String[] split = num.split(",");
+            int sum = 0;
+            for (String s : split) {
+//                System.out.println(s);
+                sum += Integer.parseInt(s);
+            }
+            System.out.println("总和：" + sum);
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        // 读取计算
-        int sum = 0;
-        try (FileInputStream in = new FileInputStream(txt)) {
-            int value;
-            while ((value = in.read()) != -1) {
-                int number = value;
-                sum += number;
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        System.out.println("总和：" + sum);
     }
 }

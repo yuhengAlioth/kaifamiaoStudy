@@ -17,16 +17,21 @@ public class SplitFile {
     public static void main(String[] args) {
         String target = "C:\\Users\\15322\\Videos\\Captures\\无尘视频.mp4";
         String dest = "C:\\Users\\15322\\Videos\\Captures\\copy";
-        split(target,1024 * 512,dest);
+//        split(target,dest,1024 * 512);
+        split2(target,dest,1024 * 512);
     }
 
-    private static void split(String target,long size ,String dest){
-        File file = new File(dest);
-        // 判断目录是否存在
-        if (!file.exists()){
-            file.mkdirs();
+    private static void split(String target,String dest,long size){
+        File targetFile = new File(target);
+        File destFile = new File(dest);
+        if (!targetFile.exists()){
+            throw new RuntimeException("该目录下没有这个文件");
         }
-        try (FileInputStream in =new FileInputStream(target)){
+        // 判断目录是否存在
+        if (!destFile.exists()){
+            destFile.mkdirs();
+        }
+        try (FileInputStream in = new FileInputStream(target)){
             int count = 1;
             byte[] bytes = new byte[(int) size]; // 每次取传入的字节大小内容放进byte[]
             while (true){
@@ -40,7 +45,54 @@ public class SplitFile {
                 out.close();
                 count ++;
             }
-            System.out.println("文件分割完成。");
+            System.out.println("文件分割完成");
+            System.out.println("文件分割为：" + (count - 1) + "个");
+        }catch (IOException  e){
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void split2(String target,String dest,long size){
+        File targetFile = new File(target);
+        File destFile = new File(dest);
+        if (!targetFile.exists()){
+            throw new RuntimeException("该目录下没有这个文件");
+        }
+        // 判断目录是否存在
+        if (!destFile.exists()){
+            destFile.mkdirs();
+        }
+        try (FileInputStream in = new FileInputStream(target)){
+            int count = 1;
+            while (in.available() > 0){
+                if (size > Integer.MIN_VALUE - 8){ // 数组最大的长度
+                    long sum = size;
+                    try (FileOutputStream out = new FileOutputStream(new File(dest, count + ".aliothstar"),true);){
+                        while (sum > Integer.MIN_VALUE - 8 && in.available() > 0){
+                            byte[] bytes = new byte[Integer.MIN_VALUE - 8];
+                            int readSize = in.read(bytes); // 读出拿到的字节的长度
+                            out.write(bytes,0,readSize); // 将byte[]的数据写入到新目录的文件里面
+                            sum -= readSize; // 减去这次分割的长度后剩下的长度
+                            count ++;
+                        }
+                        if (in.available() > 0) { // 最后一次的size位还没读完
+                            byte[] bytes = new byte[(int) sum];
+                            int readSize = in.read(bytes);
+                            out.write(bytes, 0, readSize);
+                            count ++;
+                        }  // 从输入流in里面读取 size长度的字节到输出流 out
+                    }
+                }else {
+                    byte[] bytes = new byte[(int) size]; // 每次取传入的字节大小内容放进byte[]
+                    try (FileOutputStream out = new FileOutputStream(new File(dest, count + ".aliothstar"),true);){
+                        int readSize = in.read(bytes); // 读出拿到的字节的长度
+                        out.write(bytes,0,readSize); // 将byte[]的数据写入到新目录的文件里面
+                        count ++;
+                    }
+                }
+            }
+            System.out.println("文件分割完成");
+            System.out.println("文件分割为：" + (count - 1) + "个");
         }catch (IOException  e){
             throw new RuntimeException(e);
         }

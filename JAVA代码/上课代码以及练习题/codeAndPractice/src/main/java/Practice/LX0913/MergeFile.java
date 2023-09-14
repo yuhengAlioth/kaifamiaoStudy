@@ -18,66 +18,63 @@ import java.util.Comparator;
  */
 public class MergeFile {
     public static void main(String[] args) {
-        String sourceDir = "C:\\Users\\15322\\Videos\\Captures\\copy"; // 分割文件所在目录
-        String destFile = "C:\\Users\\15322\\Videos\\Captures\\copy\\合并视频.mp4"; // 合并后的文件路径和名称
+        String dest = "C:\\Users\\15322\\Videos\\Captures\\copy"; // 分割文件所在目录
+        String target = "C:\\Users\\15322\\Videos\\Captures\\copy\\合并视频.mp4"; // 合并后的文件路径和名称
 
-        merge(sourceDir,destFile);
+        merge(dest, target);
     }
-    private static void merge(String sourceDir,String destFile){
 
-        try(FileOutputStream fos = new FileOutputStream(destFile);) {
+    private static void merge(String dest, String target) {
+        File targetFile = new File(target);
+        if (!targetFile.getParentFile().exists()){
+            targetFile.getParentFile().mkdirs();
+        }
 
-            File dir = new File(sourceDir);
-            File[] files = dir.listFiles((dir1, name) -> name.endsWith(".aliothstar")); // 获取目录中的所有文件
+        File destFile = new File(dest);
+        File[] files = destFile.listFiles((destFile1, name) -> name.endsWith(".aliothstar")); // 获取目录中的所有文件
+        System.out.println("要合并的文件数量：" + files.length + "个");
 
-            System.out.println("合并的文件数量：" + files.length);
+        if (files.length == 0) {
+            System.out.println("没有要合成的文件");
+        } else {
+            // 按文件名称顺序排序
+            Arrays.sort(files, new Comparator<File>() {
+                @Override
+                public int compare(File o1, File o2) {
+                    String string1 = o1.getName();
+                    String string2 = o2.getName();
+                    int index1 = Integer.parseInt(string1.split("\\.")[0]);
+                    int index2 = Integer.parseInt(string2.split("\\.")[0]);
+                    return index1 - index2;
+                }
+            });
+            // 简写
+            Arrays.sort(files, (f1, f2) -> {
+                int index1 = Integer.parseInt(f1.getName().split("\\.")[0]);
+                int index2 = Integer.parseInt(f2.getName().split("\\.")[0]);
+                return index1 - index2;
+            });
 
-            if (files.length == 0){
-                System.out.println("没有要合成的文件");
-            }else {
+            try (FileOutputStream out = new FileOutputStream(target);) {
                 for (File file : files) {
-                    // 确保是文件而不是目录
-                    if (file.isFile()) {
-                        // 按文件名称排序
-                        Arrays.sort(files,(f1,f2) ->{
-                            String string1 = f1.getName();
-                            String string2 = f2.getName();
-                            int index1 = Integer.parseInt(string1.split("\\.")[0]);
-                            int index2 = Integer.parseInt(string2.split("\\.")[0]);
-                            return index1 - index2;
-                        });
-                        Arrays.sort(files, new Comparator<File>() {
-                            @Override
-                            public int compare(File o1, File o2) {
-                                String string1 = o1.getName();
-                                String string2 = o2.getName();
-                                int index1 = Integer.parseInt(string1.split("\\.")[0]);
-                                int index2 = Integer.parseInt(string2.split("\\.")[0]);
-                                return index1 - index2;
-                            }
-                        });
-
-                        FileInputStream fis = new FileInputStream(file);
-                        byte[] buffer = new byte[1024]; // 用于读取文件的缓冲区
+                    try (FileInputStream in = new FileInputStream(file);){
+                        byte[] buffer = new byte[1024]; // 读取文件的缓冲区
                         int length;
-                        while ((length = fis.read(buffer)) > 0) { // 读取文件内容并写入合并文件
-                            fos.write(buffer, 0, length);
+                        while ((length = in.read(buffer)) > 0) { // 读取文件内容并写入合并文件
+                            out.write(buffer, 0, length);
                         }
-                        fis.close();
                     }
                 }
                 System.out.println("文件合并完成");
-                for (File file1 : files) {
-                    file1.delete();
+                for (File f : files) {
+                    f.delete();
                 }
                 System.out.println("分割文件删除完成");
-
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-            fos.close();
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
+
     }
 }
 
