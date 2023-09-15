@@ -29,11 +29,13 @@ public class ChuShiBiao {
             stringList.sort(new Comparator<String>() {
                 @Override
                 public int compare(String o1, String o2) {
-                    return o1.compareTo(o2);
+                    int i1 = Integer.parseInt(o1.split("\\.")[0]);
+                    int i2 = Integer.parseInt(o2.split("\\.")[0]);
+                    return i1 - i2;
                 }
             });
 
-            Collections.sort(stringList); //排序简写
+//            Collections.sort(stringList); // 自然排序
 
             for (String s : stringList) {
 //                System.out.println(s);
