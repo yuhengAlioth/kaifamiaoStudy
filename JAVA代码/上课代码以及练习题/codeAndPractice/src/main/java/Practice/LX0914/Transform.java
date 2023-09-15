@@ -18,9 +18,9 @@ public class Transform {
 
         List<String> stringList = new ArrayList<>();
 
-        try (FileReader reader = new FileReader(new File("D:\\桌面\\出师表.txt"));
+        try (FileReader reader = new FileReader(new File("io\\出师表.txt"));
              BufferedReader bufferedReader = new BufferedReader(reader);
-             FileWriter writer = new FileWriter(new File("D:\\桌面\\出师表(gbk).txt"), Charset.forName("GBK"));
+             FileWriter writer = new FileWriter(new File("io\\出师表(gbk).txt"), Charset.forName("GBK"));
              BufferedWriter bufferedWriter = new BufferedWriter(writer);) {
             String line = ""; // 读一行文本
             while ((line = bufferedReader.readLine()) != null) {

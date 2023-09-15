@@ -16,9 +16,9 @@ public class ChuShiBiao {
 
         List<String> stringList = new ArrayList<>();
 
-        try(FileReader fileReader = new FileReader("F:\\webwork\\开发喵\\JAVA代码\\上课代码以及练习题\\codeAndPractice\\src\\main\\java\\Practice\\LX0914\\csb.txt");
+        try(FileReader fileReader = new FileReader("io\\csb.txt");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            FileWriter fileWriter = new FileWriter("D:\\桌面\\出师表.txt");
+            FileWriter fileWriter = new FileWriter("io\\出师表.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);) {
             String line = ""; // 读一行文本
             while ((line = bufferedReader.readLine()) != null) {
