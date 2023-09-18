@@ -1,6 +1,11 @@
 package Practice.LX0915;
 
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson2.JSON;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * @作者：玉蘅
@@ -12,17 +17,21 @@ import com.alibaba.fastjson2.JSON;
  */
 public class StudentTest {
     public static void main(String[] args) {
-        String string = """
-                {
-                	"id" : 1,
-                    "name" : "枫原万叶",
-                    "age" : 20,
-                    "password" : "123456",
-                    "hobby" : ["唱歌", "游戏", "学习"]
-                }
-                """;
-        Student student = JSON.parseObject(string,Student.class);
-        System.out.println(student);
+        try(FileInputStream in = new FileInputStream("io\\student.json")) {
+            byte[] bytes = in.readAllBytes();
+            String s = new String(bytes);
+
+            Student bean = JSONUtil.toBean(s, Student.class);
+            System.out.println(bean);
+
+            Student student = JSON.parseObject(s, Student.class);
+            System.out.println(student);
+
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }

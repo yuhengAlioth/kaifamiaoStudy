@@ -1,10 +1,11 @@
 package Practice.LX0915;
 
+import com.alibaba.fastjson2.JSON;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
+import java.io.*;
 
 /**
  * @作者：玉蘅
@@ -24,9 +25,24 @@ public class Person implements Serializable {
     private Person son;
 
 
+/*    @Override
+    public Object clone() {
+        String jsonString = JSON.toJSONString(this);
+        // 字符串  运行类型
+        return JSON.parseObject(jsonString,Person.class);
+    }*/
     @Override
     public Object clone() {
-        return null;
+        String fileName = "io\\person.txt";
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName));
+             ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName));) {
+            out.writeObject(this);
+            return in.readObject();
+        } catch (IOException e) {
+            return null;
+        } catch (ClassNotFoundException e) {
+            return null;
+        }
     }
 }
 

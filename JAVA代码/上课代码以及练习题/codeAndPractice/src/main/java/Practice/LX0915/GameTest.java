@@ -1,10 +1,9 @@
 package Practice.LX0915;
 
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson2.JSON;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * @作者：玉蘅
@@ -17,9 +16,13 @@ import java.io.IOException;
 public class GameTest {
     public static void main(String[] args) {
         Game game = new Game("永杰无间",4.9,455254,98);
-        String jsonString = JSON.toJSONString(game);
 
-//        System.out.println(jsonString);
+        String jsonString = JSON.toJSONString(game);
+        System.out.println(jsonString);
+
+        String jsonPrettyStr = JSONUtil.toJsonPrettyStr(game);
+        System.out.println(jsonPrettyStr);
+
 
         try (FileWriter fileWriter = new FileWriter("io\\game.text");
              BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);){
@@ -29,6 +32,15 @@ public class GameTest {
         }catch (IOException e){
             System.out.println(e.getMessage());
         }
+
+        try (FileOutputStream out = new FileOutputStream("io\\game.text");) {
+            out.write(jsonPrettyStr.getBytes());
+        } catch (FileNotFoundException e) {
+            System.out.println("文件不存在");
+        } catch (IOException e) {
+            System.out.println("写出失败！");
+        }
+
     }
 
 }
