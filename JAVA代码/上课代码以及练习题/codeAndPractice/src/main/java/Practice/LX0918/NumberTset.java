@@ -16,6 +16,34 @@ public class NumberTset{
         NumberThread2 thread2 = new NumberThread2();
         thread1.start();
         thread2.start();
+
+        // 创建两个线程，一个打印偶数，另一个打印奇数（范围从1到10）
+        Thread t1 = new Thread() { // 匿名类 Thread
+            public void run() {
+                for (int i = 1; i <= 10; i++) {
+                    if (i % 2 != 0) {
+                        System.out.println(i + "是奇数");
+                    }
+                }
+            }
+        };
+
+        Thread t2 = new Thread(() -> {
+            for (int i = 1; i <= 10; i++) {
+                if (i % 2 == 0) {
+                    System.out.println(i + "是偶数");
+                }
+            }
+        });
+
+        t2.start();
+        try {
+            t2.join(); // main 线程停下来（阻塞） 等待t2执行结束
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        t1.start();
+
     }
 
 }
