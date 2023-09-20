@@ -65,7 +65,7 @@ class PastyTest {
                 while (true) {
                     pasty.cook();
                 }
-            }, "ʦ" + i).start();
+            }, "岳山" + i).start();
         }
         for (int i = 0; i < 2; i ++) {
             new Thread(() -> {
