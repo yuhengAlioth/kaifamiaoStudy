@@ -8,7 +8,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -142,19 +141,19 @@ public class BookManager {
     public void addBookInfo(){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("请输入图书的出版日期:");
+        System.out.print("请输入图书的出版日期:");
         String publication_date = scanner.next();
 
-        System.out.println("请输入图书的书名:");
+        System.out.print("请输入图书的书名:");
         String book_title = scanner.next();
 
-        System.out.println("请输入图书的作者:");
+        System.out.print("请输入图书的作者:");
         String author = scanner.next();
 
-        System.out.println("请输入图书的价格:");
+        System.out.print("请输入图书的价格:");
         double price = scanner.nextDouble();
 
-        System.out.println("请输入图书的数量:");
+        System.out.print("请输入图书的数量:");
         int quantity = scanner.nextInt();
         // 获取连接
         try(Connection connection = getConnection();) {
@@ -170,7 +169,8 @@ public class BookManager {
             int rowsInserted = statement.executeUpdate(); // 返回影响行数
 
             if (rowsInserted > 0) {
-                System.out.println("添加《" + book_title + "》图书成功");
+//                System.out.println("添加《" + book_title + "》图书成功");
+                System.out.printf("\033[36;1m添加《%s》图书成功\n\033[0m",book_title);
                 String desc = "新增图书 - 书名：《" + book_title + "》";
                 log(desc);
             }
@@ -184,7 +184,7 @@ public class BookManager {
     public void removeBook(){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("请输入要删除图书的书名:");
+        System.out.print("请输入要删除图书的书名:");
         String book_title = scanner.next();
         // 获取连接
         try(Connection connection = getConnection();) {
@@ -195,7 +195,8 @@ public class BookManager {
 
             int rowsDeleted = statement.executeUpdate(); // 影响行数
             if (rowsDeleted > 0) {
-                System.out.println("删除《" + book_title + "》图书成功");
+//                System.out.println("删除《" + book_title + "》图书成功");
+                System.out.printf("\033[36;1m删除《%s》图书成功\n\033[0m",book_title);
                 String desc = "删除图书记录 - 书名：《" + book_title + "》";
                 log(desc);
             }
@@ -208,10 +209,10 @@ public class BookManager {
     public void modifyBookQuantity(){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("请输入要修改数量的图书的书名:");
+        System.out.print("请输入要修改数量的图书的书名:");
         String book_title = scanner.next();
 
-        System.out.println("请输入修改的数量:");
+        System.out.print("请输入修改的数量:");
         int quantity = scanner.nextInt();
         // 获取连接
         try (Connection connection = getConnection();){
@@ -231,7 +232,8 @@ public class BookManager {
 
                 int rowsUpdate = statement.executeUpdate(); // 影响行数
                 if (rowsUpdate > 0) {
-                    System.out.println("修改《" + book_title + "》图书数量成功");
+//                    System.out.println("修改《" + book_title + "》图书数量成功");
+                    System.out.printf("\033[36;1m修改《%s》图书数量成功\n\033[0m",book_title);
                     String desc = "修改图书信息 - 书名：《" + book_title + "》原数量：" + oldQuantity + " 修改后：" + quantity;
                     log(desc);
                 }
@@ -262,7 +264,8 @@ public class BookManager {
                 double price = resultSet.getDouble("price");
                 int quantity = resultSet.getInt("quantity");
 
-                System.out.println("出版日期：" + publication_date + ",书名: " + book_title + ",作者：" + author + ",价格：" + price + ",数量: " + quantity);
+//                System.out.println("出版日期：" + publication_date + ",书名: " + book_title + ",作者：" + author + ",价格：" + price + ",数量: " + quantity);
+                System.out.printf("\033[36;1m出版日期：%s，书名：《%s》，作者：%s，价格：%.2f，数量：%d\n\033[0m",publication_date,book_title,author,price,quantity);
             }
         } catch (SQLException e) {
             System.out.println("查询失败: " + e.getMessage());
@@ -285,7 +288,8 @@ public class BookManager {
 
             int rowsInserted = statement.executeUpdate(); // 返回影响行数
             if (rowsInserted > 0) {
-                System.out.println("日志记录成功");
+//                System.out.println("日志记录成功");
+                System.out.printf("\033[35;1m日志记录成功\n\033[0m");
             }
         } catch (SQLException e) {
             System.out.println("添加失败: " + e.getMessage());
