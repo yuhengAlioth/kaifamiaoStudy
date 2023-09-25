@@ -34,7 +34,9 @@ public class BookManager {
 
     // TODO 初始化图书馆
     public void init(){
-        List<String> dbLists = new ArrayList<>(); // 储存数据库里面所有表的名称
+
+        // 储存数据库里面所有表的名称
+        List<String> dbLists = new ArrayList<>();
         // 2. 获取连接
         try (Connection conn = getConnection();
              // 3. 获取执行sql的对象
@@ -76,15 +78,33 @@ public class BookManager {
 
         // 判断是否存在两张表
         if (book == null && log == null){
-            List<String> sqlLists = new ArrayList<>(); // 读取sql语句
 
             try(FileReader fileReader = new FileReader("io\\sql.txt");
                 BufferedReader bufferedReader = new BufferedReader(fileReader);) {
-                String line = ""; // 读一行文本
+                String line = ""; // 读文件里的一行文本
+                String all = ""; // 所有文本
                 while ((line = bufferedReader.readLine()) != null) {
-                    String[] oneLine = line.split(";");
-                    for (String s : oneLine) {
-                        sqlLists.add(s.trim());
+                    all += line;
+                }
+                String[] split = all.split(";"); // 按照 ; 进行分割句子
+
+                // 使用循环创建表
+                for (String s : split) {
+                    try (// 2. 获取连接
+                         Connection conn = getConnection();
+                         // 4. 获取执行sql的对象
+                         Statement stat = conn.createStatement();) {
+
+                        // 5. 执行sql
+                        int i = stat.executeUpdate(s); // 返回值是影响行数
+                        // 6. 解析返回值
+//                        if (i == 0) {
+//                            System.out.println("创建表成功");
+//                        } else {
+//                            System.out.println("创建表失败");
+//                        }
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
                     }
                 }
 
@@ -92,45 +112,6 @@ public class BookManager {
                 throw new RuntimeException(e);
             }
 
-            // 定义创建表的sql语句
-            String bookSql = "";
-            String logSql = "";
-            for (int i = 0; i < sqlLists.size(); i++) {
-                // 0~7 第一句
-                if (i<=7){
-                    bookSql += sqlLists.get(i);
-                }
-                if (i>7){
-                    logSql += sqlLists.get(i);
-                }
-
-            }
-//            System.out.println(bookSql);
-//            System.out.println(logSql);
-
-
-            try (// 2. 获取连接
-                 Connection conn = getConnection();
-                 // 4. 获取执行sql的对象
-                 Statement stat = conn.createStatement();) {
-
-                // 5. 执行sql
-                int i = stat.executeUpdate(bookSql); // 返回值是影响行数
-                int j = stat.executeUpdate(logSql); // 返回值是影响行数
-                // 6. 解析返回值
-                if (i == 0 && j == 0) {
-                    System.out.println("创建表成功");
-                } else {
-                    System.out.println("创建表失败");
-                }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-
-        }else {
-//            System.out.println(book);
-//            System.out.println(log);
-//            System.out.println("图书馆初始化完毕");
         }
 
 
