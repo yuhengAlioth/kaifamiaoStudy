@@ -1,4 +1,4 @@
-package JDBC;
+package JDBC.学习;
 
 
 import java.sql.Connection;
