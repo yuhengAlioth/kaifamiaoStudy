@@ -1,4 +1,4 @@
-package JDBC.练习;
+package JDBC.练习.one;
 
 import java.io.IOException;
 import java.sql.*;

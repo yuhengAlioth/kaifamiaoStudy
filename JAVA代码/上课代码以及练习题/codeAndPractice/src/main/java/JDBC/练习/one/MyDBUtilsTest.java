@@ -1,4 +1,6 @@
-package JDBC.练习;
+package JDBC.练习.one;
+
+import JDBC.练习.one.MyDBUtils;
 
 import java.io.IOException;
 import java.sql.ResultSet;
