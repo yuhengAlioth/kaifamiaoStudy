@@ -19,13 +19,18 @@ import java.util.Properties;
  */
 public class DruidDemo {
     public static void main(String[] args) {
-        Properties prop = new Properties();
         try {
+            // 加载配置文件
+            Properties prop = new Properties();
             prop.load(new FileInputStream("resources//druid.properties"));
+            // 通过配置创建
             DataSource ds = DruidDataSourceFactory.createDataSource(prop);
+            // 获取连接对象
             Connection conn = ds.getConnection();
             System.out.println(conn);
+            // 获取执行sql的对象
             PreparedStatement statement = conn.prepareStatement("select * from books");
+            // 执行sql
             ResultSet set = statement.executeQuery();
             ResultSetMetaData metaData = set.getMetaData();
             int count = metaData.getColumnCount();
