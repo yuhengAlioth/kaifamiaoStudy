@@ -1,0 +1,113 @@
+<!--
+ * @Date: 2023-10-06 19:37:51
+ * @作者: 七星玉蘅
+ * @邮箱: 1532250426@qq.com
+ * @LastEditTime: 2023-10-06 21:11:44
+ * @FilePath: \开发喵\前端代码\1006\003.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003</title>
+</head>
+
+<body>
+    <form action="">
+        <table border="0" align="center">
+            <tr>
+                <td>登录名：</td>
+                <td>
+                    <input type="text" name="name" id="name">
+                    &nbsp;
+                    <span>(看包含 a-z、0-9和下划线)</span>
+                </td>
+                <td>
+                    <img src="./images/read.gif" alt="">
+                    <a style="font-size: 1.5rem;">阅读贵美网络协议</a>
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input type="password" name="pass" id="pass">
+                    &nbsp;
+                    <span>(至少包含6个字符)</span>
+                </td>
+                <td rowspan="8">
+                    <textarea name="introduce" id="introduce" cols="30" rows="20"
+                        placeholder="欢迎阅读服务条款协议..."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>再次输入密码：</td>
+                <td>
+                    <input type="password" name="password" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td>电子邮箱：</td>
+                <td>
+                    <input type="email" name="email" id="email">
+                    &nbsp;
+                    <span>(必须包含@字符)</span>
+                </td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <input type="radio" name="gender" id="gender" value="男">
+                    <img src="./images/Male.gif" alt="">
+                    男&nbsp;
+                    <input type="radio" name="gender" id="gender" value="女">
+                    <img src="./images/Female.gif" alt="">
+                    女&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>头像：</td>
+                <td>
+                    <input type="file" name="file" id="file">
+                </td>
+            </tr>
+            <tr>
+                <td>爱好：</td>
+                <td>
+                    <input type="checkbox" name="hobby" id="yd" value="运动">运动&nbsp;
+                    <input type="checkbox" name="hobby" id="lt" value="聊天">聊天&nbsp;
+                    <input type="checkbox" name="hobby" id="wyx" value="玩游戏">玩游戏&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>喜欢的城市：</td>
+                <td>
+                    <!-- <input type="text" name="type" id="type" list="typelist" placeholder="请选择">
+                    <datalist id="typelist">
+                        <option>西安</option>
+                        <option>北京</option>
+                    </datalist> -->
+                    <select id="group" value="1">
+                        <option>请选择</option>
+                        <option value="1">西安</option>
+                        <option value="2">北京</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button
+                        style="border: none; background-image: url('./images/submit.gif');background-size: cover;height: 34px;width: 80px;"
+                        type="submit"></button>
+                    <button
+                        style="border: none; background-image: url('./images/reset.gif');background-size: cover;height: 34px;width: 80px;"
+                        type="reset"></button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
