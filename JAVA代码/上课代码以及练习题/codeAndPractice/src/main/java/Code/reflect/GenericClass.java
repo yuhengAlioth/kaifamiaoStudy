@@ -1,0 +1,12 @@
+package Code.reflect;
+
+/**
+ * @作者：玉蘅
+ * @项目名称：codeAndPractice
+ * @包名：Code.reflect
+ * @文件名称：GenericClass
+ * @代码功能：
+ * @时间：2023/10/06/15:07
+ */
+public class GenericClass<T, E, A> {
+}
