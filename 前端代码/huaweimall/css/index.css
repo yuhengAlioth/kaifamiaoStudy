@@ -1,0 +1,298 @@
+/* 初始化样式 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* 顶部导航样式 - start - */
+.top {
+    height: 36px;
+    background-color: #000;
+}
+
+.t-center {
+    width: 80%;
+    height: 36px;
+    margin: 0 auto;
+    /* 文本间距 */
+    line-height: 36px;
+    /* flex布局 */
+    display: flex;
+    /* 两端分布 */
+    justify-content: space-between;
+}
+
+
+.t-center-left,
+.t-center-right {
+    width: 40%;
+    height: 36px;
+    font-size: 12px;
+    display: flex;
+}
+
+.t-center-left li,
+.t-center-right .item {
+    float: left;
+    padding: 0 8px;
+    /* 相对定位 */
+    position: relative;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.t-center-left li:first-child,
+.t-center-right .item:first-child {
+    padding-left: 0;
+}
+
+.t-center-left li::before,
+.t-center-right .item::before {
+    /* 插入元素 */
+    content: "";
+    width: 1px;
+    height: 10px;
+    /* 变成块元素 */
+    display: block;
+    /* 绝对定位 */
+    position: absolute;
+    top: 13px;
+    right: 0;
+    background: #414141;
+}
+
+.t-center-left li:last-child::before {
+    display: none
+}
+
+
+.t-center-left .dropdown {
+    position: relative;
+    padding-right: 10px;
+}
+
+
+.t-center-left .dropdown::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/dropdown.png");
+    background-size: 16px 16px;
+    position: absolute;
+    top: 0;
+    right: -12px;
+}
+
+.t-center-left a {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.t-center-right div {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.t-item img {
+    vertical-align: middle;
+}
+
+.t-shopping {
+    background-color: #424242;
+}
+
+.t-shopping img {
+    vertical-align: middle;
+    width: 20px;
+    margin-left: 5px;
+}
+
+/* 顶部导航样式 - end - */
+/* 白色导航样式 - start - */
+.nav {
+    height: 74px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+.nav-center {
+    width: 70%;
+    height: 74px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-logo img {
+    height: 74px;
+}
+
+.nav-left {
+    width: 80%;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left li {
+    float: left;
+    font-size: 16px;
+    padding: 0 25px;
+}
+
+.nav-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 白色导航样式 - end - */
+/* 内容样式 - start - */
+.conatiner {
+    height: 6000px;
+    width: 100%;
+    background-color: #f1f3f5;
+}
+
+/* 轮播图 */
+.swiper {
+    height: 550px;
+    background-image: url("../img/banner.webp");
+    background-size: cover;
+    background-position: -300px 0;
+}
+
+/* 小导航 */
+.snav {
+    margin-top: 10px;
+    height: 190px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-sort {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.sort-item {
+    width: 16%;
+    height: 90px;
+    text-align: center;
+}
+
+.size-img {
+    width: 48px;
+    margin-bottom: 5px;
+}
+
+.size-name {
+    color: #333;
+    font-size: 14px;
+}
+
+/* 甄选推荐 手机专区*/
+.r-name,
+.p-name {
+    width: 70%;
+    height: 64px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.r-left,
+.p-left {
+    height: 32px;
+    margin: auto 0;
+    font-size: 24px;
+}
+
+.r-right,
+.p-right {
+    height: 32px;
+    margin: auto 0;
+    font-size: 16px;
+}
+
+.recommend {
+    width: 73%;
+    height: 386px;
+    margin: 5px auto;
+}
+
+.re-box {
+    margin: 0 5px;
+    float: left;
+}
+
+.item {
+    width: 291px;
+    height: 386px;
+    text-align: center;
+    background: #fff;
+    padding: 20px 0;
+    margin: 0 0 14px 14px;
+    float: left;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+
+.item:hover {
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.item-img {
+    width: 291px;
+    height: 253px;
+    margin-bottom: 18px;
+}
+
+.item-name {
+    width: 214px;
+    height: 21px;
+    color: #333;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 auto 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-desc {
+    width: 214px;
+    height: 18px;
+    color: #b0b0b0;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 auto 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-price {
+    color: #ff6700;
+    font-size: 14px;
+}
+
+/* 手机专区 */
+
+/* 内容样式 - end - */
