@@ -1,0 +1,163 @@
+<!--
+ * @Date: 2023-10-12 11:00:58
+ * @作者: 七星玉蘅
+ * @邮箱: 1532250426@qq.com
+ * @LastEditTime: 2023-10-13 09:06:36
+ * @FilePath: \开发喵\前端代码\bootstrap\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>bootstrap框架</title>
+</head>
+
+<body>
+    <!-- 顶部黑色导航 -->
+    <div class="top">
+        <div class="container t-center">
+            <div class="row justify-content-between">
+                <div class="col-md-auto">
+                    <div class="row justify-content-betwen">
+                        <div class="col-md-auto top-nav">
+                            <a href="#">首页</a>
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a href="#">消费者业务网站</a>
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a href="#">V码(优购码)</a>
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a href="#">企业商用</a>
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a href="#">Select Region</a>
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a class="top-r">更多精彩</a>
+                            <img src="./img/dropdown.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-auto">
+                    <div class="row justify-content-center">
+                        <div class="col-md-auto top-nav">
+                            <a href="#">请登录</a>
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a href="#">注册</a>
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a href="#">我的订单</a>
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a href="#" class="top-r">客服</a>
+                            <img src="./img/dropdown.png" alt="">
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a href="#" class="top-r">网站导航</a>
+                            <img src="./img/dropdown.png" alt="">
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a href="#" class="top-r">手机版</a>
+                            <img src="./img/dropdown.png" alt="">
+                        </div>
+                        <div class="col-md-auto top-nav">
+                            <a href="#" class="top-r">
+                                <img src="./img/shopping-cart.png" alt="">
+                                购物车(0)
+                            </a>
+                        </div>
+                    </div>
+                    <div class="t-item"></div>
+                    <div class="t-item"></div>
+                    <div class="t-item">
+
+                    </div>
+                    <div class="t-item">
+
+                    </div>
+                    <div class="t-item">
+
+                    </div>
+                    <div class="shopping">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 白色导航栏 -->
+    <div class="nav">
+        <div class="container nav-center">
+            <div class="row justify-content-around">
+                <div class="col-11">
+                    <div class="row justify-content-betwen">
+                        <div class="col-md-auto nav-logo">
+                            <img src="./img/logo_app.png" alt="">
+                        </div>
+                        <div class="col-md-auto nav-a">
+                            <a href="#">华为</a>
+                        </div>
+                        <div class="col-md-auto nav-a">
+                            <a href="#">问界汽车</a>
+                        </div>
+                        <div class="col-md-auto nav-a">
+                            <a href="#">华为智选</a>
+                        </div>
+                        <div class="col-md-auto nav-a">
+                            <a href="#">生态周边</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="row justify-content-betwen">
+                        <div class="col-md-auto">
+                            <img src="./img/search.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="conatiner">
+        <!-- 轮播图 -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/banner.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/wj.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/shopping-cart.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+    </div>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true, // 循环模式选项
+            autoplay: true,
+            pagination: {
+                el: ".swiper-pagination",
+                // dynamicBullets: true,
+            },
+
+        });
+    </script>
+</body>
+
+</html>

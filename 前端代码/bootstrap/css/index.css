@@ -1,0 +1,102 @@
+/* 顶部黑色导航 */
+.top {
+    width: 100%;
+    height: 36px;
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.t-center {
+    width: 90%;
+    height: 36px;
+    /* 文本间距 */
+    line-height: 36px;
+    font-size: 12px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.top-nav a:hover {
+    color: #fff;
+}
+
+.top-nav a::before {
+    /* 插入元素 */
+    content: "";
+    width: 1px;
+    height: 10px;
+    /* 变成块元素 */
+    display: block;
+    /* 绝对定位 */
+    position: absolute;
+    top: 13px;
+    right: 0;
+    background: #414141;
+}
+
+
+.top-nav .top-r:hover {
+    color: red;
+}
+
+/* 白色导航栏 */
+.nav {
+    height: 74px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.nav-center {
+    height: 74px;
+    /* 文本间距 */
+    line-height: 74px;
+    font-size: 16px;
+}
+
+.nav-logo img {
+    height: 74px;
+}
+
+.nav-a a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-a a:hover {
+    color: red;
+}
+
+
+.conatiner {
+    height: 6000px;
+    width: 100%;
+    /* background-color: #f1f3f5; */
+    background-color: #4785c2;
+}
+
+/* 轮播图 */
+.swiper {
+    width: 100%;
+    height: 550px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
