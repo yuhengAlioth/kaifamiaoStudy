@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f9a8c7e0-e487-4e1b-a5de-828155ca9605" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../javaweb/exercises/exercises.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/exercises/src/cn/aliothstar/dao/UsersDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/exercises/src/cn/aliothstar/entity/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/exercises/src/cn/aliothstar/servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/exercises/src/cn/aliothstar/servlet/RegisterServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/exercises/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/exercises/web/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/exercises/web/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/exercises/web/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/javaweb.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/resources/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/MyServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletDemo10.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletDemo3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletDemo4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletDemo5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletDemo6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletDemo7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletDemo8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletDemo9.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/src/cn/aliothstar/servlet/ServletLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/web/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaweb/web/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../前端代码/bootstrap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../前端代码/bootstrap/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../前端代码/bootstrap/swiper.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../前端代码/bootstrap/swiper.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2Wku8gSglPBEqOLbqcNINdHnT9a" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/IDEA/开发喵/developing-meow-learning/JAVA代码/上课代码以及练习题/codeAndPractice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.16017316&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="ChaRu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Code.PaiXu.ChaRu" />
+      <module name="codeAndPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Code.PaiXu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ChaRu" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9a8c7e0-e487-4e1b-a5de-828155ca9605" name="Changes" comment="" />
+      <created>1691477859821</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691477859821</updated>
+      <workItem from="1697288741919" duration="1306000" />
+      <workItem from="1697298413755" duration="42000" />
+      <workItem from="1697344128297" duration="530000" />
+      <workItem from="1697419319647" duration="243000" />
+      <workItem from="1697420773350" duration="25000" />
+      <workItem from="1697422330455" duration="41000" />
+      <workItem from="1697448531465" duration="169000" />
+      <workItem from="1697448988648" duration="2389000" />
+      <workItem from="1697504250147" duration="33000" />
+      <workItem from="1697504344668" duration="37000" />
+      <workItem from="1697505765797" duration="68000" />
+      <workItem from="1697508578957" duration="1725000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

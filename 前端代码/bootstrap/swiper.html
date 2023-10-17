@@ -2,8 +2,8 @@
  * @Date: 2023-10-12 16:24:03
  * @作者: 七星玉蘅
  * @邮箱: 1532250426@qq.com
- * @LastEditTime: 2023-10-12 17:37:35
- * @FilePath: \开发喵\前端代码\bootstrap\swiper.html
+ * @LastEditTime: 2023-10-14 23:36:14
+ * @FilePath: \前端代码\bootstrap\swiper.html
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -101,7 +101,6 @@
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <div class="swiper-scrollbar"></div>
         <div class="swiper-pagination"></div>
     </div>
 
@@ -109,34 +108,22 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            autoplay: {
-                dosableOnInteraction: false,
-                delay: 1000,
-            },
-            slidesPerView: 1,
-            centeredSlides: false,
-            slidesPerGroupSkip: 1,
-            grabCursor: true,
-            keyboard: {
-                enabled: true,
-            },
-            breakpoints: {
-                769: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 2,
-                },
-            },
-            scrollbar: {
-                el: ".swiper-scrollbar",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+            loop: true, // 循环模式选项
+        autoplay: {
+            disableOnInteraction: false,  // 用户操作swiper之后，是否禁止autoplay
+            delay: 3000, // 自动切换的时间间隔（单位ms）
+        },
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
         });
     </script>
 </body>

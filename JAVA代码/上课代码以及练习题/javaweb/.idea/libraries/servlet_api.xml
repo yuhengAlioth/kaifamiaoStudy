@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="servlet-api">
+    <CLASSES>
+      <root url="jar://D:/Environmnt/Java/apache-tomcat-9.0.80/lib/servlet-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://D:/Environmnt/Java/apache-tomcat-9.0.80-src/java" />
+    </SOURCES>
+  </library>
+</component>
