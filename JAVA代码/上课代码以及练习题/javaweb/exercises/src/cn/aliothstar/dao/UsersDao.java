@@ -49,6 +49,7 @@ public class UsersDao {
         try {
             query = queryRunner.query(getConnection(), sql, new BeanListHandler<>(Users.class));
         } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
             return null;
         }
         return query;
@@ -67,6 +68,7 @@ public class UsersDao {
         try {
             return queryRunner.query(getConnection(), sql, new BeanHandler<>(Users.class), username, password);
         } catch (SQLException e) {
+            e.printStackTrace();
             return null;
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
@@ -84,6 +86,7 @@ public class UsersDao {
         try {
             return queryRunner.query(getConnection(), sql, new BeanHandler<>(Users.class), username);
         } catch (SQLException e) {
+            e.printStackTrace();
             return null;
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
@@ -103,6 +106,7 @@ public class UsersDao {
             queryRunner.update(getConnection(), sql, username, password,email);
             return true;
         } catch (SQLException e) {
+            e.printStackTrace();
             return false;
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);

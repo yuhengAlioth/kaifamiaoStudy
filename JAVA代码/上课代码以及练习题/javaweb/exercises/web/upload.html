@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+</head>
+<body>
+<form action="/exercises/upload" method="post" enctype="multipart/form-data">
+  <input type="file" name="allFile" ><br>
+  <button type="submit">上传单个文件</button>
+</form>
+
+<br>
+<br>
+
+<form action="/exercises/uploadFiles" method="post" enctype="multipart/form-data">
+    <input type="file" name="allFile" multiple><br>
+    <button type="submit">上传多个文件</button>
+</form>
+
+<br>
+<br>
+
+<form action="/exercises/uploadLog" method="post" enctype="multipart/form-data">
+    <input type="file" name="allFile" multiple><br>
+    <button type="submit">上传多个文件并且数据库记录</button>
+</form>
+</body>
+</html>
