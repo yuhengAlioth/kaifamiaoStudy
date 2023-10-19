@@ -14,6 +14,8 @@
           <element id="library" level="project" name="hutool-all-5.8.16" />
           <element id="library" level="project" name="commons-dbutils-1.7" />
           <element id="library" level="project" name="easy-captcha-1.6.2" />
+          <element id="library" level="project" name="javax.mail-1.6.2" />
+          <element id="library" level="project" name="activation-1.1.1" />
         </element>
       </element>
     </root>

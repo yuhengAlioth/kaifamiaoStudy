@@ -37,8 +37,10 @@ public class UploadLogServlet extends HttpServlet {
 
         // 获取访问人的IP地址
         String uip = req.getRemoteHost();
+        uip = "0:0:0:0:0:0:0:1".equals(uip) ? "127.0.0.1" : uip;
         // 获取服务IP地址
         String ip = req.getLocalAddr();
+        ip = "0:0:0:0:0:0:0:1".equals(ip) ? "127.0.0.1" : ip;
         // 获取服务端口号
         int port = req.getLocalPort();
         // 获取项目的上下文路径
