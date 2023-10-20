@@ -30,7 +30,7 @@ public class CookieServlet extends HttpServlet {
         // 发件人邮箱
         String fromEmail = "1532250426@qq.com";
         // 发件人邮箱密码
-        String password = "msaqkdmvahhqhfib";
+        String password = "";
         // 发送邮件
         sendEmail(toEmail, fromEmail, password, randomNumber);
 
