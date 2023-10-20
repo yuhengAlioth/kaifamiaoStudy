@@ -2,6 +2,14 @@
   <library name="activation-1.1.1">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/activation-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-dbutils-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/druid-1.2.18.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/easy-captcha-1.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fastjson2-2.0.40.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hutool-all-5.8.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.mail-1.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lombok-1.18.24.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.29.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

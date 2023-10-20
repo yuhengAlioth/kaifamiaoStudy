@@ -8,14 +8,15 @@
           <element id="module-output" name="exercises" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="mysql-connector-java-8.0.29" />
-          <element id="library" level="project" name="druid-1.2.18" />
-          <element id="library" level="project" name="fastjson2-2.0.40" />
-          <element id="library" level="project" name="hutool-all-5.8.16" />
-          <element id="library" level="project" name="commons-dbutils-1.7" />
-          <element id="library" level="project" name="easy-captcha-1.6.2" />
-          <element id="library" level="project" name="javax.mail-1.6.2" />
           <element id="library" level="project" name="activation-1.1.1" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/activation-1.1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/commons-dbutils-1.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/druid-1.2.18.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/easy-captcha-1.6.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/hutool-all-5.8.16.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/fastjson2-2.0.40.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javax.mail-1.6.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.29.jar" />
         </element>
       </element>
     </root>
