@@ -8,11 +8,10 @@ import utils.TimeUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -60,6 +59,15 @@ public class LoginController extends HttpServlet {
                 // 将登录的用户存储到session中
                 HttpSession session = req.getSession();
                 session.setAttribute("loginUser", login);
+
+                String name = login.getName();
+                //创建Cookie
+                Cookie cookie = new Cookie(URLEncoder.encode("name", StandardCharsets.UTF_8), URLEncoder.encode(name, StandardCharsets.UTF_8));
+                //设置Cookie的最大生命周期,否则浏览器关闭后Cookie即失效
+                cookie.setMaxAge(Integer.MAX_VALUE);
+                //将Cookie加到response中
+                resp.addCookie(cookie);
+
                 // 向前端响应登录成功页面
                 resp.setHeader("content-type", "text/html;charset=utf-8");
                 //获取字符输出流将内容输出到浏览器

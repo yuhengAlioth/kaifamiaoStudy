@@ -1,12 +1,13 @@
 package controller;
 
+import model.KfmUser;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @作者：玉蘅
@@ -24,16 +25,31 @@ public class LogoutController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
         resp.setCharacterEncoding("UTF-8");
+
+        Cookie[] cookies = req.getCookies();
+        for (Cookie cookie : cookies) {
+            String name = cookie.getName();
+
+            String decodeName = URLDecoder.decode(name, StandardCharsets.UTF_8);
+
+            Cookie cookie1 = new Cookie(decodeName, null);
+            cookie.setMaxAge(0); // 将过期时间设置为0，即立即过期
+            cookie.setPath("/index"); // 设置cookie的路径，确保能够覆盖整个网站
+            resp.addCookie(cookie1);
+        }
+
         // 获取session
         HttpSession session = req.getSession();
         Object loginUser = session.getAttribute("loginUser");
         if (loginUser == null) {
-            resp.getWriter().write("<h3>请先登录</h3>");
+//            resp.getWriter().write("<h3>请先登录</h3>");
+            resp.setHeader("content-type", "text/html;charset=utf-8");
+            resp.getWriter().write("<script>alert('确定退出吗?');window.location.href='/index';</script>");
             return;
         }
         session.removeAttribute("loginUser");
         session.invalidate();
-        resp.sendRedirect("/index.html");
+        resp.sendRedirect("/");
     }
 
     @Override

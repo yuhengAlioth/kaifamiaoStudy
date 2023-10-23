@@ -20,6 +20,76 @@
 <a href="/fileList">查看上传文件信息</a>
 
 
+<h2><p id="demo"></p></h2>
+<a id="loginLink" href="/login">请登录</a>
+<a id="logoutLink" href="/logout" style="display: none">退出登录</a>
+
+<script>
+    // 检查是否存在cookie
+    if (document.cookie.length > 0) {
+        // 显示特定名称的cookie
+        var cookieName = "name"; // 特定名称的cookie
+        var cookiePattern = new RegExp(cookieName + "=[^;]");
+        var x = document.cookie.split(";");
+        for (var i = 0; i < x.length; i++) {
+            var cookie = x[i].trim();
+            if (cookiePattern.test(cookie)) {
+                var str = cookie.split("=")[1]; // 获取等号后面的部分，即值
+                // 将url编码格式内容还原
+                str = decodeURIComponent(str);
+
+                document.getElementById("demo").innerHTML += "欢迎用户 " + str + " 回来!<br>";
+                document.getElementById("loginLink").style.display = "none";
+                document.getElementById("logoutLink").style.display = "inline";
+            }
+        }
+    } else {
+        // 显示"请登录"链接
+        document.getElementById("loginLink").style.display = "inline";
+        document.getElementById("logoutLink").style.display = "none";
+    }
+    function deleteAllCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookieName = cookies[i].substr(0, cookies[i].indexOf("="));
+            deleteCookie(cookieName);
+        }
+    }
+    // 添加窗口关闭事件监听器，清除cookie
+    window.addEventListener("beforeunload", function() {
+        document.getElementById("loginLink").style.display = "inline";
+        // document.cookie = "";
+        deleteAllCookies();
+
+    });
+</script>
+
+
+<!--<h2 id="cookie-message">显示当前页面所有的Cookie</h2>-->
+
+<!--<p id="demo"></p>-->
+
+<!--<script>-->
+<!--    // 检查是否存在cookie-->
+<!--    if (document.cookie !== "") {-->
+<!--        // 如果存在cookie，显示cookie的内容-->
+<!--        var x = document.cookie.split(";");-->
+<!--        for (var i = 0; i < x.length; i++) {-->
+<!--            var cookie = x[i].trim();-->
+<!--            document.getElementById("demo").innerHTML += cookie + "<br>";-->
+<!--        }-->
+<!--    } else {-->
+<!--        // 如果不存在cookie，显示请登录链接或其他默认内容-->
+<!--        document.getElementById("demo").innerHTML = "请登录";-->
+<!--    }-->
+
+<!--    // 在浏览器关闭前清除cookie-->
+<!--    window.onbeforeunload = function() {-->
+<!--        // 设置cookie的过期时间为当前时间，这将导致浏览器在关闭时清除cookie-->
+<!--        document.cookie = "";-->
+<!--    };-->
+<!--</script>-->
+
 
 </body>
 </html>
