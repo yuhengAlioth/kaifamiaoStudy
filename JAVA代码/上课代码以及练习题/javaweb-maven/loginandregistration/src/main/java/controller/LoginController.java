@@ -3,7 +3,6 @@ package controller;
 import com.wf.captcha.utils.CaptchaUtil;
 import model.KfmUser;
 import service.KfmUserService;
-import utils.FileUtils;
 import utils.TimeUtils;
 
 import javax.servlet.ServletException;
@@ -12,7 +11,6 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
