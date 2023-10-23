@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h1>首页</h1>
+
+<form action="/uploadFiles" method="post" enctype="multipart/form-data">
+    <input type="file" name="allFile" multiple><br>
+    <button type="submit">上传多个文件并且数据库记录</button>
+</form>
+
+<br>
+<a href="/list">查看上传服务器的文件信息</a>
+<br>
+
+<br>
+<a href="/fileList">查看上传文件信息</a>
+
+
+
+</body>
+</html>

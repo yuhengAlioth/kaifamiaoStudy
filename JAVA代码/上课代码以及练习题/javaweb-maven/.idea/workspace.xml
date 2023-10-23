@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="loginandregistration:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2477ab9a-498e-4438-a86c-e83640d820ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/controller/CaptchaServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/controller/ListFileServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/controller/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/controller/LogoutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/controller/read.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/mapper/UsersMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/mapper/read.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/model/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/model/read.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/service/read.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/utils/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/utils/DataSourceUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/utils/MailUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/java/cn/aliothstar/utils/read.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/resources/datasource.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/webapp/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email/src/main/webapp/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/CaptchaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/DownloadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/FileListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/LogoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/SeeFileListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/UploadFilesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/mapper/KfmFileMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/mapper/KfmUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/model/KfmFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/model/KfmUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/service/KfmUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/utils/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/utils/DataSourceUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/utils/TimeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/resources/datasource.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/webapp/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/webapp/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/webapp/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/webapp/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaweb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javaweb/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Environmnt\Java\apache-maven-3.8.8\repository" />
+        <option name="mavenHome" value="D:/Environmnt/Java/apache-maven-3.8.8" />
+        <option name="userSettingsFile" value="D:\Environmnt\Java\apache-maven-3.8.8\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2X1Q1OAcxa0KU3NxTaMmJhcXNIC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Maven&quot;: &quot;Maven&quot;,
+    &quot;Notification.DoNotAsk-Maven&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/IDEA/开发喵/developing-meow-learning/JAVA代码/上课代码以及练习题/javaweb-maven/loginandregistration/src/main/webapp&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IDEA\开发喵\developing-meow-learning\JAVA代码\上课代码以及练习题\javaweb-maven\loginandregistration\src\main\webapp" />
+      <recent name="E:\IDEA\开发喵\developing-meow-learning\JAVA代码\上课代码以及练习题\javaweb-maven\loginandregistration\src\main\webapp\css" />
+      <recent name="E:\IDEA\开发喵\developing-meow-learning\JAVA代码\上课代码以及练习题\javaweb-maven\loginandregistration\src\main\resources" />
+      <recent name="E:\IDEA\开发喵\developing-meow-learning\JAVA代码\上课代码以及练习题\javaweb-maven\email\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.loginandregistration">
+    <configuration name="email" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.80" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="email:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="6da7442e-11de-4187-89a1-dcb2025a6445" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8126" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="email:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="loginandregistration" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.80" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="loginandregistration:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="5148b062-da54-44d6-a353-75a91191a939" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="4264" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="loginandregistration:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.email" />
+      <item itemvalue="Tomcat Server.loginandregistration" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\15322\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2477ab9a-498e-4438-a86c-e83640d820ea" name="Changes" comment="" />
+      <created>1691477859821</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691477859821</updated>
+      <workItem from="1697793891992" duration="4668000" />
+      <workItem from="1697815117019" duration="749000" />
+      <workItem from="1697815998185" duration="2588000" />
+      <workItem from="1697850394105" duration="29327000" />
+      <workItem from="1698023249045" duration="418000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
