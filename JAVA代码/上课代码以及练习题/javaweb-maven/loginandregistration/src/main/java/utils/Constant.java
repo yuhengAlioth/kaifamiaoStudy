@@ -16,5 +16,9 @@ public class Constant {
     public static final String UPLOAD_PATH = "E:\\TestUpload";
     // 上传文件的格式
     public static final List<String> ALLOW_TYPES = List.of("image/jpeg", "image/png", "image/gif", "image/webp");
+    // session
+    public static final String LOGIN_USER_KEY = "loginUser";
+    // 在线人数
+    public static final String ONLINE_KEY = "onlineUserCount";
 }
 

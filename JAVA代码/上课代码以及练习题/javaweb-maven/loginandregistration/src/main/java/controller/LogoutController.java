@@ -1,6 +1,7 @@
 package controller;
 
 import model.KfmUser;
+import utils.Constant;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -40,14 +41,14 @@ public class LogoutController extends HttpServlet {
 
         // 获取session
         HttpSession session = req.getSession();
-        Object loginUser = session.getAttribute("loginUser");
+        Object loginUser = session.getAttribute(Constant.LOGIN_USER_KEY);
         if (loginUser == null) {
 //            resp.getWriter().write("<h3>请先登录</h3>");
             resp.setHeader("content-type", "text/html;charset=utf-8");
             resp.getWriter().write("<script>alert('确定退出吗?');window.location.href='/index';</script>");
             return;
         }
-        session.removeAttribute("loginUser");
+        session.removeAttribute(Constant.LOGIN_USER_KEY);
         session.invalidate();
         resp.sendRedirect("/");
     }

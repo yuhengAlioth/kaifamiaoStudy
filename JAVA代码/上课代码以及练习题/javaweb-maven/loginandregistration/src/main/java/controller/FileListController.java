@@ -1,5 +1,6 @@
 package controller;
 
+import utils.Constant;
 import utils.FileUtils;
 
 import javax.servlet.ServletException;
@@ -29,7 +30,7 @@ public class FileListController extends HttpServlet {
         resp.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html;charset=utf-8");
         HttpSession session = req.getSession();
-        Object loginUser = session.getAttribute("loginUser");
+        Object loginUser = session.getAttribute(Constant.LOGIN_USER_KEY);
         if (loginUser == null) {
             // 向前端响应登录成功页面
             resp.setHeader("content-type", "text/html;charset=utf-8");

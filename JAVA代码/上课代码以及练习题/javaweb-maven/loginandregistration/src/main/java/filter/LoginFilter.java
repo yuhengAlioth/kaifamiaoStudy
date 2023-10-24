@@ -1,5 +1,7 @@
 package filter;
 
+import utils.Constant;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +43,7 @@ public class LoginFilter implements Filter {
             chain.doFilter(req, resp);
             return;
         }
-        String[] urls = {"/login","/login.html", "/captcha", ".css", ".js", "/register", "/register.html"};
+        String[] urls = {"/login","/login.html", "/captcha", ".css", ".js", "/register", "/register.html","/online"};
         for (String url : urls) {
             if (uri.contains(url)) { // 说明访问的是登录/注册需要的资源，直接放行
                 // 放行 让浏览器访问本该访问的东西
@@ -52,7 +54,8 @@ public class LoginFilter implements Filter {
         }
         // 判断是否已经登录 session  --> user 如果存在--> 放行 不存在-->跳转到登录页面
         HttpSession session = req.getSession();
-        Object user = session.getAttribute("loginUser");
+        Object user = session.getAttribute(Constant.LOGIN_USER_KEY);
+        System.out.println(user);
         if (user == null) { // 未登录，去登录页面
             System.out.println("未登录");
             resp.sendRedirect("/login");

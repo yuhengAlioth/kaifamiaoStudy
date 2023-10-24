@@ -34,7 +34,7 @@ public class UploadFilesController extends HttpServlet {
         resp.setContentType("text/html;charset=utf-8");
 
         HttpSession session = req.getSession();
-        Object loginUser = session.getAttribute("loginUser");
+        Object loginUser = session.getAttribute(Constant.LOGIN_USER_KEY);
         if (loginUser == null) {
             // 向前端响应登录成功页面
             resp.setHeader("content-type", "text/html;charset=utf-8");

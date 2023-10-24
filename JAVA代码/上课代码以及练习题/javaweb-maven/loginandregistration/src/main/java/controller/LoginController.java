@@ -3,6 +3,7 @@ package controller;
 import com.wf.captcha.utils.CaptchaUtil;
 import model.KfmUser;
 import service.KfmUserService;
+import utils.Constant;
 import utils.TimeUtils;
 
 import javax.servlet.ServletException;
@@ -56,7 +57,7 @@ public class LoginController extends HttpServlet {
             } else {
                 // 将登录的用户存储到session中
                 HttpSession session = req.getSession();
-                session.setAttribute("loginUser", login);
+                session.setAttribute(Constant.LOGIN_USER_KEY, login);
 
                 String name = login.getName();
                 //创建Cookie
@@ -76,7 +77,7 @@ public class LoginController extends HttpServlet {
             System.out.println("验证码错误");
             resp.setHeader("content-type", "text/html;charset=utf-8");
             resp.getWriter().write("<script>alert('验证码错误'); window.location.href='/login';</script>");
-//            resp.sendRedirect(req.getContextPath() + "/login");
+
         }
     }
 }
