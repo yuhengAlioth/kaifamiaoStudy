@@ -27,12 +27,14 @@ public class OnlineServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 获取登录用户的数量 --> ServletContext 中的值
         ServletContext servletContext = req.getServletContext();
+
         List<KfmUser> list = (List<KfmUser>) servletContext.getAttribute(Constant.ONLINE_KEY);
         resp.setContentType("text/html;charset=utf-8");
         StringBuilder html = new StringBuilder("<h2>在线人数" + list.size() + "</h2>");
         for (KfmUser s : list) {
-
-            html.append("<p>").append(s.getName()).append("</p>");
+            html.append("<p>用户ID：").append(s.getId()).append("</p>");
+            html.append("<p>用户名称：").append(s.getName()).append("</p>");
+            html.append("<a href='/offline?id=").append(s.getId()).append("'>").append("下线</a>");
         }
         resp.getWriter().write(html.toString());
 

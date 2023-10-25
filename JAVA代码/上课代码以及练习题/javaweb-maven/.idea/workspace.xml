@@ -10,22 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2477ab9a-498e-4438-a86c-e83640d820ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/OnlineServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/listener/MyHttpSessionAttributeListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/listener/MyHttpSessionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/listener/MyServletContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../codeAndPractice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../codeAndPractice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/OfflineServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/FileListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/FileListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/LogoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/SeeFileListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/SeeFileListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/UploadFilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/UploadFilesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginandregistration/src/main/java/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/filter/LoginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginandregistration/src/main/java/utils/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/utils/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaweb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javaweb/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/OnlineServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/loginandregistration/src/main/java/controller/OnlineServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,6 +308,11 @@
       <workItem from="1698124201904" duration="33000" />
       <workItem from="1698124246846" duration="49000" />
       <workItem from="1698124310983" duration="170000" />
+      <workItem from="1698145872605" duration="84000" />
+      <workItem from="1698146087912" duration="790000" />
+      <workItem from="1698195778178" duration="256000" />
+      <workItem from="1698196184247" duration="549000" />
+      <workItem from="1698201063955" duration="10050000" />
     </task>
     <servers />
   </component>
