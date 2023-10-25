@@ -8,6 +8,7 @@
   <modules>
     <module>email</module>
       <module>loginandregistration</module>
+      <module>JSP</module>
   </modules>
   <version>1.0-SNAPSHOT</version>
   <name>javaweb-maven Maven Webapp</name>
