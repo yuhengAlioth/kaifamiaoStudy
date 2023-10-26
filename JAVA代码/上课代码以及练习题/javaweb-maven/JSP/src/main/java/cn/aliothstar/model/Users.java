@@ -3,7 +3,7 @@ package cn.aliothstar.model;
 import lombok.Data;
 
 import java.io.Serial;
-import java.time.LocalDateTime;
+import java.io.Serializable;
 
 /**
  * @作者：玉蘅
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
  * @时间：2023/10/25/20:12
  */
 @Data
-public class Users {
+public class Users implements Serializable {
     private Integer id;
     private String username;
     private String password;
