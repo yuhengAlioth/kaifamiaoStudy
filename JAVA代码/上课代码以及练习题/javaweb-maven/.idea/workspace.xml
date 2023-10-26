@@ -10,10 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2477ab9a-498e-4438-a86c-e83640d820ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../java-spring/src/main/java/cn/aliothstar/javaspring/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-spring/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/src/main/java/cn/aliothstar/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/src/main/java/cn/aliothstar/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-spring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../java-spring/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,6 +408,7 @@
       <workItem from="1698239327333" duration="23000" />
       <workItem from="1698282245584" duration="1463000" />
       <workItem from="1698284089699" duration="2680000" />
+      <workItem from="1698311231288" duration="32000" />
     </task>
     <servers />
   </component>
