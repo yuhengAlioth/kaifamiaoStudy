@@ -11,5 +11,6 @@ package cn.aliothstar.javaspring.utils;
 
 public class Constant {
     public static final String LOGIN_USER_KEY = "loginUser";
+    public static final String MESSAGE_KEY = "msg";
 }
 

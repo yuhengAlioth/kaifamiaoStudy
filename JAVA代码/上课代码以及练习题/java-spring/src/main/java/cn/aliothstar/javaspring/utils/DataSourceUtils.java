@@ -12,17 +12,18 @@ import java.util.Properties;
  * @项目名称：java-spring
  * @包名：cn.aliothstar.javaspring.utils
  * @文件名称：DataSourceUtils
- * @代码功能：链接数据库
+ * @代码功能：dbutils链接数据库
  * @时间：2023/10/26/17:28
  */
 
 public class DataSourceUtils {
     private static Connection connection;
+    private static Properties properties;
 
     static {
-        // 获取配置文件 datasource.properties 所在的流里面数据库链接信息
-        InputStream in = DataSourceUtils.class.getClassLoader().getResourceAsStream("datasource.properties");
-        Properties properties = new Properties();
+        properties = new Properties();
+        // 获取配置文件 db.properties 所在的流里面数据库链接信息
+        InputStream in = DataSourceUtils.class.getClassLoader().getResourceAsStream("db.properties");
         try {
             properties.load(in);
             String className = properties.getProperty("driverClassName");
