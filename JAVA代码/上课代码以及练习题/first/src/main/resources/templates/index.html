@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h3{
+            text-align: center;margin: 100px auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="/adduser">新增学生</a>
+    </div>
+    <br/>
+    <div class="button-container">
+        <a href="/findAll">查看全部信息</a>
+    </div>
+    <br/>
+    <div class="button-container">
+        <a href="/listPage">分页查询</a>
+    </div>
+    <br/>
+    <div class="button-container">
+        <form action="#" th:action="@{/fAll}" method="get">
+            <label for="pageNumber">页码:</label>
+            <input type="number" id="pageNumber" name="page" min="1">
+            <label for="pageSizeNumber">每页记录数:</label>
+            <input type="number" id="pageSizeNumber" name="pageSize" min="1">
+            <input type="submit" value="查询">
+        </form>
+    </div>
+
+
+</body>
+</html>

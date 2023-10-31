@@ -1,6 +1,10 @@
 package cn.aliothstar.javaspring.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * @作者：玉蘅
@@ -11,7 +15,12 @@ import lombok.Data;
  * @时间：2023/10/26/17:15
  */
 @Data
-public class Users {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Users  implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private Integer id;
     private String username;
     private String password;

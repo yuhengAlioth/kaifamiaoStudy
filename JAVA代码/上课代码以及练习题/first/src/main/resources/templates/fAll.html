@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>序号</th>
+        <th>ID</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="user : ${session.user}">
+        <td th:text="${userStat.count}"></td>
+        <td th:text="${user.getId()}"></td>
+        <td th:text="${user.getUserName()}"></td>
+        <td th:text="${user.getPassword()}"></td>
+        <td th:text="${user.getName()}"></td>
+        <td th:text="${user.getAge()}"></td>
+        <td>
+            <a th:href="@{/showOne(id=${user.getId()})}">修改</a>
+            <a th:href="@{/deleteuser(id=${user.getId()})}">删除</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

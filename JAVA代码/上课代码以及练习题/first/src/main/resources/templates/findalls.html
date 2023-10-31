@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+    <script th:src="@{js/jquery-3.6.0.min.js}"></script>
+    <script th:src="@{js/bootstrap.min.js}"></script>
+    <style>
+        h3 {
+            text-align: center;
+            margin: 100px auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>序号</th>
+        <th>ID</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="user : ${page.data}">
+        <td th:text="${userStat.count}"></td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.userName}"></td>
+        <td th:text="${user.password}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+        <td>
+            <a th:href="@{/showOne(id=${user.id})}">修改</a>
+            <a th:href="@{/deleteuser(id=${user.id})}">删除</a>
+        </td>
+    </tr>
+</table>
+
+<br>
+<br>
+<br>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">序号</th>
+        <th scope="col">ID</th>
+        <th scope="col">用户名</th>
+        <th scope="col">密码</th>
+        <th scope="col">姓名</th>
+        <th scope="col">年龄</th>
+        <th scope="col">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student :${page.data}">
+        <td scope="row" th:text="${studentStat.count}"></td>
+        <td th:text="${student.id}"></td>
+        <td th:text="${student.userName}"></td>
+        <td th:text="${student.password}"></td>
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.age}"></td>
+        <td>
+            <a th:href="@{/showOne(id=${student.id})}">修改</a>
+            <a th:href="@{/deleteuser(id=${student.id})}">删除</a>
+        </td>
+
+
+    </tr>
+    <script>
+        $('#exampleModal').on('show.bs.modal', function (event) {
+            let button = $(event.relatedTarget) // Button that triggered the modal
+            let id = button.data('whatever') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            let modal = $(this)
+            // modal.find('.modal-title').text('New message to ' + recipient)
+            modal.find('#id').val(id)
+        })
+    </script>
+
+
+    </tbody>
+</table>
+<!--分页-->
+<nav aria-label="...">
+    <ul class="pagination justify-content-center">
+        <li th:class="${page.hasPrev ? 'page-item' : 'page-item disabled'} ">
+            <a class="page-link" th:href="@{/listPage(pageNum=${page.prevNum})}">上一页</a>
+        </li>
+
+        <li th:class="${num==page.pageNum ? 'page-item active' : 'page-item'}" th:each="num : ${page.pageNumbers}">
+            <a class="page-link" th:href="@{/listPage(pageNum=${num})}" th:text="${num}"></a></li>
+        <li th:class="${page.hasNext ? 'page-item' : 'page-item disabled'}">
+            <a class="page-link" th:href="@{/listPage(pageNum=${page.nextNum})}">下一页</a>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>

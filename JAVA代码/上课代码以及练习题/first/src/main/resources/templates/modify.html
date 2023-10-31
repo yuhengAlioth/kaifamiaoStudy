@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h3 {
+            text-align: center;
+            margin: 100px auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <form action="/modify" method="post">
+            <td><input type="text" readonly="readonly" th:value="${oneUser.getId()}" name="id"></td>
+            <td><input type="text" th:value="${oneUser.getUserName()}" name="username"></td>
+            <td><input type="tel" th:value="${oneUser.getPassword()}" name="password"></td>
+            <td><input type="text" th:value="${oneUser.getName()}" name="name"></td>
+            <td><input type="text" th:value="${oneUser.getAge()}" name="age"></td>
+            <td><input type="submit" value="修改"></td>
+        </form>
+    </tr>
+
+</table>
+
+
+</body>
+</html>
