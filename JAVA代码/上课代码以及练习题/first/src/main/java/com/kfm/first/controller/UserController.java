@@ -9,12 +9,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -25,32 +27,6 @@ public class UserController {
     @GetMapping("/index")
     public String index() {
         return "index";
-    }
-    @GetMapping("/login")
-    public String login() {
-        return "login";
-    }
-
-    @RequestMapping("/login")
-    public String test(HttpServletRequest request, HttpServletResponse response, String username, String password, String captcha) throws IOException {
-        Students user = studentsDao.login(username, password);
-        response.setCharacterEncoding("utf-8");
-        request.setCharacterEncoding("utf-8");
-        response.setContentType("type/html;charset=utf-8");
-        boolean ver = CaptchaUtil.ver(captcha, request);
-        if (!ver) {
-            String html = "<script>alert('验证码错误'); window.location.href='/login';</script>";
-            CaptchaUtil.clear(request);
-            response.getWriter().write(html);
-        }
-        if (user != null) {
-            HttpSession session = request.getSession();
-            session.setAttribute("loginuser", user);
-            return "index";
-        } else {
-            String html = "<script>alert('用户名或密码错误');</script>";
-            return "login";
-        }
     }
 
 
@@ -70,13 +46,34 @@ public class UserController {
         return "fAll";
     }
     @RequestMapping("/listPage")
-    public ModelAndView getPage(Integer pageNum, Integer pageSize){
-        Page<Students> page = userService.findPage(pageNum,pageSize);
+//    public ModelAndView getPage(Integer pageNum, Integer pageSize){
+    public ModelAndView getPage(Integer pageNum, Integer pageSize, Students student) {
+//        Page<Students> page = userService.findPage(pageNum,pageSize);
+        Page<Students> page = userService.findPage(pageNum, pageSize, student);
         ModelAndView mv =new ModelAndView();
         mv.addObject("page",page);
+        System.out.println(Arrays.toString(page.getPageNumbers()));
+        mv.addObject("condition", student);
         mv.setViewName("findalls");
         return mv;
     }
+    // student 参数的意义 将请求中的参数封装到 Student 对象中 参数名和对象属性名一致 类型也是一致的 （@DateTimeFormat(pattern = "yyyy-MM-dd")）
+    @RequestMapping(value = "/selectByCondition", method = RequestMethod.GET)
+    public ModelAndView selectByCondition(Students student) {
+        List<Students> byCondition = userService.findBYCondition(student);
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("findalls");
+        Page<Students> studentPage = new Page<Students>(1, 2,
+                (byCondition == null ? 0 : byCondition.size()), byCondition);
+        System.out.println(studentPage.getPageCount());
+        System.out.println(Arrays.toString(studentPage.getPageNumbers()));
+        mv.addObject("page", studentPage);
+        mv.addObject("condition", student);
+        return mv;
+    }
+
+
+
     @GetMapping("/deleteuser")
     public String deleteUser(HttpServletRequest request, int id, Model model) {
         int delete = studentsDao.delete(id);

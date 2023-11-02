@@ -89,10 +89,32 @@ public class Page<T> implements Serializable {
     }
 
     public int[] getPageNumbers() {
-        // 1,2,3,4,5
-        int[] numbers = new int[getPageCount()];
-        for (int i = 1; i <= numbers.length; i++) {
-            numbers[i - 1] = i;
+//        // 1,2,3,4,5
+//        int[] numbers = new int[getPageCount()];
+//        for (int i = 1; i <= numbers.length; i++) {
+//            numbers[i - 1] = i;
+//        }
+//        return numbers;
+        // 10 1,2,3,4,5,6,7,8,9,10  5 当前页 前两个 后两个 1,2 3 4,5，6
+        int start = 1;
+        int end = getPageCount();
+        if (getPageCount() > 5) {
+            // 1 -1  3   456 7 8
+            start = pageNum - 2;
+            end = pageNum + 2;
+            if (start <= 0) {
+                start = 1;
+                end = 5;
+            }
+            end = pageNum + 2;
+            if (end > getPageCount()) {
+                end = getPageCount();
+                start = end - 4;
+            }
+        }
+        int[] numbers = new int[end - start + 1];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = start + i;
         }
         return numbers;
     }

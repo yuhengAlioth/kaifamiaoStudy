@@ -1,0 +1,7 @@
+spring:
+  servlet:
+    multipart:
+      # 单个文件的上传大小限制
+      max-file-size: 10MB
+      # 单次请求上传文件大小的限制
+      max-request-size: 20MB
